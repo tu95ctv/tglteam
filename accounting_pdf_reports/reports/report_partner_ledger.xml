@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_partnerledger">
+        <t t-call="web.html_container">
+            <t t-set="data_report_margin_top" t-value="12"/>
+            <t t-set="data_report_header_spacing" t-value="9"/>
+            <t t-set="data_report_dpi" t-value="110"/>
+            <!-- <t t-foreach="docs" t-as="o"> -->
+                <div class="page">
+                    <div class="row mt32 mb32">
+                        <div class="col-7">
+                            <div>
+                                <strong>Đơn vị báo cáo: <span t-esc="res_company.name"/></strong>
+                            </div>
+                            <div>
+                                <strong>Địa chỉ:<t t-esc="res_company.partner_id" t-options='{"widget": "contact", "fields": ["address"], "no_marker": True}'/></strong>
+                            </div>
+                        </div>
+                        <div class="col-5 text-center font-weight-bold">
+                        </div>
+                    </div>
+
+                    <h2 class="text-center">DANH MỤC CÔNG NỢ</h2>
+
+                    <table class="table table-striped table-reports">
+                        <thead>
+                            <tr class="text-center">
+                                <th>Ngày</th>
+                                <th>JRNL</th>
+                                <th>Tài khoản</th>
+                                <th>Tham chiếu</th>
+                                <th class="text-right">Nợ</th>
+                                <th class="text-right">Có</th>
+                                <th class="text-right">Số dư</th>
+                                <th t-if="data['form']['amount_currency']">Tiền tệ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="docs" t-as="o">
+                                <tr>
+                                    <td colspan="4">
+                                            <strong t-esc="o.ref"/>
+                                            - <strong t-esc="o.name"/>
+                                    </td>
+                                    <td class="text-right">
+                                        <strong t-esc="sum_partner(data, o, 'debit')" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                    </td>
+                                    <td class="text-right">
+                                        <strong t-esc="sum_partner(data, o, 'credit')" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                    </td>
+                                    <td class="text-right">
+                                        <strong t-esc="sum_partner(data, o, 'debit - credit')" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                    </td>
+                                </tr>
+                                <tr t-foreach="lines(data, o)" t-as="line">
+                                    <td>
+                                        <span t-esc="line['date']"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="line['code']"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="line['a_code']"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="line['displayed_name']"/>
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-esc="line['debit']" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-esc="line['credit']" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                    </td>
+                                    <td class="text-right">
+                                        <span t-esc="line['progress']" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                    </td>
+                                    <td class="text-right" t-if="data['form']['amount_currency']">
+                                        <t t-if="line['currency_id']">
+                                        <span t-esc="line['amount_currency']" t-options="{'widget': 'monetary', 'display_currency': line['currency_id']}"/>
+                                        </t>
+                                    </td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+
+                    <div class="row mt32">
+                        <div class="col-12 text-right font-weight-bold">
+                            Lập, ngày ... tháng ... năm ...
+                        </div>
+                    </div>
+
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr class="text-center font-weight-bold font-italic">
+                                <th>Người lập biểu</th>
+                                <th>Kế toán trưởng</th>
+                                <th>Giám đốc</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="text-center" style="height: 150px">
+                                <td>(Ký, họ tên)</td>
+                                <td>(Ký, họ tên)</td>
+                                <td>(Ký, họ tên, đóng dấu)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                </div>
+            <!-- </t> -->
+        </t>
+    </template>
+</odoo>

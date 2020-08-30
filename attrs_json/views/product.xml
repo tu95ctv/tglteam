@@ -1,0 +1,18 @@
+<odoo>
+  <data>
+    <record id="product_form_inherit_for_attributes" model="ir.ui.view">
+            <field name="name">inherit.product.from</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"></field>
+            <field name="arch" type="xml">
+                <field name="barcode" position="after">
+                    <field name="attribute_value_ids_json" />
+                    <field name="attrs_jsonb_show" />
+                    <field name="pname" />
+                </field>
+
+            </field>
+    </record>
+                
+  </data>
+</odoo>

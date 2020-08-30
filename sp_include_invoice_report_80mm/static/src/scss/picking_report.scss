@@ -1,0 +1,27 @@
+
+table.vid_table_line {
+    tr {
+        border-top: 1px solid green;
+    }
+}  
+
+table.vid_sum {
+    margin-top:10px;
+    tr {
+        text-align:right;
+        border-top: 1px solid
+    }
+    // th { padding: 2px;
+    // }
+    // td {padding: 2px;
+    // }
+    td:first-child {
+    font-weight: bold;
+    width:50%;
+    }
+    td:nth-child(2) {
+        padding-right: 15px;
+        }
+}
+
+

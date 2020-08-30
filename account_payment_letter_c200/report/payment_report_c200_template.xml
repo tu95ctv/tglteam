@@ -1,0 +1,108 @@
+<odoo>
+  <data>
+    <template id="report_payment_receipt_document">
+        <t t-set="set_logo" t-value="0"/>
+        <t t-call="account_payment_letter_c200.external_layout">
+            <t t-set="o" t-value="o.with_context(lang=lang)"/>
+            <div >
+                <!-- <div class="text-center font-weight-bold" style="font-size:30px">
+                    <t t-if="o.payment_type=='inbound'">PHIẾU THU</t>
+                    <t t-else="">PHIẾU CHI</t>
+                </div> -->
+                <div class="row" style="margin-top:30px;">
+                    <div class="col-12" style="text-align:center;font-weight:1000;font-size:30px;">
+                        <b t-if="o.payment_type=='inbound'">PHIẾU THU</b>
+                        <b t-else="">PHIẾU CHI</b>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-4" >
+                        <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s&amp;humanreadable=0'%('Code128', o.name, 360, 60)" style="margin-left:-50px" /> 
+                    </div>
+                    <div class="col-4 offset-4">
+                        <div>Ngày: <span t-field="o.payment_date" t-options='{"format": "dd/MM/YYYY"}'/></div>
+                        <div>Quyển số:.......</div>
+                        <div>Số: <span t-field="o.name"/></div>
+                        <div>Nợ:.............</div>
+                        <div>Có:.............</div>
+                    </div>
+                </div>
+
+                <div class="row ">
+                    <div class="col-12">
+                        <div>Họ và tên người nộp tiền: <span t-field="o.partner_id.name"/></div>
+                        <div>Địa chỉ: <span t-field="o.partner_id.contact_address"/></div>
+                        <div>Lý do nộp: <span t-field="o.communication"/></div>
+                        <div>Số tiền: <span t-field="o.amount"/>. Viết bằng chữ: <span t-esc="o.num2words(o.amount)"/></div>
+                        <div>Kèm theo:........... Chứng từ gốc</div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top:25px;">
+                    <div class="col-12">
+                        <table class="text-center" style="margin-top:20px;width:100%">
+                            <tr>
+                                <td>
+                                    <div><b>Giám đốc</b></div>
+                                </td>
+                                <td>
+                                    <div><b>Kế toán trưởng</b></div>
+                                </td>
+                                <td>
+                                    <div><b>Người nộp tiền</b></div>
+                                </td>
+                                <td>
+                                    <div><b>Người lập</b></div>
+                                </td>
+                                <td>
+                                    <div><b>Thủ quỹ</b></div>
+                                </td>
+                            </tr>
+                            <tr style="font-size:12px">
+                                <td>
+                                    <div ><span >(ký, họ tên, đóng dấu)</span></div>
+                                </td>
+                                <td>
+                                    <div>(ký, họ tên)</div>
+                                </td>
+                                <td>
+                                    <div>(ký, họ tên)</div>
+                                </td>
+                                <td>
+                                    <div>(ký, họ tên)</div>
+                                </td>
+                                <td>
+                                    <div>(ký, họ tên)</div>
+                                </td>
+                            </tr>
+                    
+                        </table>
+                    </div>
+                </div>
+                <div class="row" style="margin-top:100px;">
+                    <div class="col-12">
+                        <div>Đã nhận đủ số tiền (viết bằng chữ):...........</div>
+                        <div>Tỷ giá ngoại tệ (Vàng bạc, đá quý):...........</div>
+                        <div>Số tiền quy đổi:...........</div>
+                        <div>(Liên gửi ra ngoài phải đóng dấu)</div>
+                    </div>
+                </div>
+
+            </div>
+        </t>
+    </template>
+
+    <template id="report_payment_receipt">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-set="lang" t-value="o.partner_id.lang"/>
+                <div style="font-family:Times New Roman">
+                    <t t-call="account_payment_letter_c200.report_payment_receipt_document" t-lang="lang"/>
+                </div>
+            </t>
+        </t>
+    </template>
+
+    
+  
+  </data>
+</odoo>

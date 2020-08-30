@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_db_plan_user,access_db_plan_user,model_db_plan,,1,1,1,1
+access_db_client_user,access_db_client_user,model_db_client,,1,1,1,1
+

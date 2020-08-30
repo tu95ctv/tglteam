@@ -1,0 +1,200 @@
+<odoo>
+    <data>
+        <template id="main_table_data" name="main_table_data">
+            <div t-att-class ="('col-%s'%config.col_size if config.col_size else 'col')" >
+                <div t-att-class="'card' if config.bg_option=='image' else 'card %s'%'bg-info'" t-att-style="'background-image:url(\'/web/image/summary.report.config/' + str(config.id) + '/bg_image/\')' if config.bg_option=='image' else None" >
+                    <div class="card-body" >
+                        <table class="table table-sm report-sum-table">
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Count</th>
+                                    <th>Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr t-foreach="config.line_ids" t-as="line" >
+                                    <td><span  t-esc="line.name"></span></td>
+                                    <td><span  t-esc="line.count"></span></td>
+                                    <td >
+                                        <span  t-esc="line.value_char" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <record id="main_table_data" model="ir.ui.view">
+            <field name="is_banner_template">1</field>
+        </record>
+        
+        <!-- template 1 -->
+        <template id="tb_1_minimal_statistics_cards" name="tb_1_minimal_statistics_cards">
+           <div class="col-xl-3 col-sm-6 col-12">
+                <div class="card mono-card">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div class="media d-flex">
+                                <t t-foreach="config.line_ids" t-as="line" >
+                                    <div class="media-body text-left">
+                                        <h3 class="primary"><span t-esc="line.value_char" /></h3>
+                                        <span t-esc="line.name" />
+                                    </div>
+                                </t>
+                                <div class="align-self-center">
+                                    <i class="icon-book-open primary font-large-2 float-right"></i>
+                                </div>
+                            </div>
+                            <div class="progress mt-3 mb-0" style="height: 7px;">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <record id="tb_1_minimal_statistics_cards" model="ir.ui.view">
+            <field name="is_banner_template">1</field>
+        </record>
+
+        <!-- template 2 -->
+        <template id="tb2_pink_minimal_statistics_with_background_color" name="tb2_pink_minimal_statistics_with_background_color">
+            <div class="col-xl-3 col-sm-6 col-12">
+                <div class="card mono-card bg-danger">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div class="media d-flex">
+                                <t t-foreach="config.line_ids" t-as="line" >
+                                    <div class="media-body white text-left">
+                                        <h3><span t-esc="line.value_char" /></h3>
+                                        <span t-esc="line.name" />
+                                    </div>
+                                </t>
+                                <div class="align-self-center">
+                                    <i class="icon-pie-chart white font-large-2 float-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <record id="tb2_pink_minimal_statistics_with_background_color" model="ir.ui.view">
+            <field name="is_banner_template">1</field>
+        </record>
+
+        <!-- template 3 -->
+        <template id="tb3_minimal_statistics_with_gradient_background_color" name="tb3_minimal_statistics_with_gradient_background_color">
+            <div class="col-xl-3 col-sm-6 col-12">
+                <div class="card mono-card">
+                    <div class="card-content">
+                        <div class="media align-items-stretch">
+                                <div class="p-4 text-center bg-primary bg-darken-2">
+                                    <i class="icon-camera font-large-2 white"></i>
+                                </div>
+                                <t t-foreach="config.line_ids" t-as="line" >
+                                    <div class="p-4 bg-gradient-x-primary white media-body">
+                                        <h5><span t-esc="line.name" /></h5>
+                                        <h5 class="text-bold-400 mb-0"><span t-esc="line.value_char" /></h5>
+                                    </div>
+                                </t>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <record id="tb3_minimal_statistics_with_gradient_background_color" model="ir.ui.view">
+            <field name="is_banner_template">1</field>
+        </record>
+
+        <!-- template 4 -->
+        <template id="tb4_green_new_order_icon_section" name="tb4_green_new_order_icon_section">
+            <div class="col-xl-3 col-sm-6 col-12">
+                <div class="card mono-card">
+                    <div class="card-content">
+                        <div class="media align-items-stretch">
+                            <t t-foreach="config.line_ids" t-as="line" >
+                                <div class="p-4 media-body text-left">
+                                    <h5><span t-esc="line.name" /></h5>
+                                    <h5 class="text-bold-400 mb-0"><span t-esc="line.value_char"/></h5>
+                                </div>
+                            </t>
+                            <div class="p-4 text-center bg-danger">
+                                <i class="icon-basket-loaded font-large-2 white"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <record id="tb4_green_new_order_icon_section" model="ir.ui.view">
+            <field name="is_banner_template">1</field>
+        </record>
+
+        <!-- template 5 -->
+        <template id="tb5_icon_section_with_background_color" name="tb5_icon_section_with_background_color">
+           <div class="col-xl-3 col-sm-6 col-12">
+                <div class="card mono-card">
+                    <div class="card-content">
+                        <div class="media align-items-stretch">
+                            <div class="p-4 text-center bg-primary bg-darken-2">
+                                <i class="icon-camera font-large-2 white"></i>
+                            </div>
+                            <t t-foreach="config.line_ids" t-as="line" >
+                                <div class="p-4 bg-primary white media-body">
+                                    <h5><span t-esc="line.name" /></h5>
+                                    <h5 class="text-bold-400 mb-0"><span t-esc="line.value_char"/></h5>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <record id="tb5_icon_section_with_background_color" model="ir.ui.view">
+            <field name="is_banner_template">1</field>
+        </record>
+        
+        <!-- template 6 -->
+        <template id="tb6_icon_section_with_gradient_background_color" name="tb6_icon_section_with_gradient_background_color">
+           <div class="col-xl-3 col-sm-6 col-12">
+                <div class="card mono-card">
+                    <div class="card-content">
+                        <div class="media align-items-stretch">
+                            <div class="p-4 text-center bg-primary bg-darken-2">
+                                <i class="icon-camera font-large-2 white"></i>
+                            </div>
+                            <t t-foreach="config.line_ids" t-as="line" >
+                                <div class="p-4 bg-gradient-x-primary white media-body">
+                                    <h5><span t-esc="line.name" /></h5>
+                                    <h5 class="text-bold-400 mb-0"><span t-esc="line.value_char"/></h5>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <record id="tb6_icon_section_with_gradient_background_color" model="ir.ui.view">
+            <field name="is_banner_template">1</field>
+        </record>
+<!-- sale_quotation_onboarding_panel_overwrite -->
+
+        <template id="sale_quotation_onboarding_panel_overwrite" name="sale_order_summary.quotation.onboarding.panel.overwrite">
+            <div class="row">
+                <t t-set="obj" t-value="request.env['sale.order']"/>
+                <div class ="col-8">
+                    <div class="row">
+                        <t t-foreach="configs" t-as="config" >
+                            <t t-raw="config.table_html"/>
+                        </t>
+                    </div>
+                </div>
+            </div>
+        </template>
+   
+    </data>
+</odoo>

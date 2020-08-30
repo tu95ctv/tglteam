@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="view_quotation_tree" >
+        <field name="name">sale.order.tree.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_quotation_tree" />
+        <field name="arch" type="xml">
+            <field name="user_id" position="after">
+                <field name="qty_sum"/>
+                <field name="qty_delivered"/>
+                <field name="delivered_amount" widget="monetary"/>
+                <field name="products_str"/>
+            </field>
+            <field name="amount_total" position="after">
+                <field name="invoice_paid" widget="monetary"/>
+                <field name="sale_liabilities" widget="monetary"/>
+            </field>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_order_tree" >
+        <field name="name">sale.order.tree.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_tree" />
+        <field name="arch" type="xml">
+            <field name="user_id" position="after">
+                <field name="products_str"/>
+            </field>
+            <field name="amount_total" position="after">
+                <field name="invoice_paid" widget="monetary"/>
+                <field name="sale_liabilities" widget="monetary"/>
+            </field>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_order_form" >
+        <field name="name">sale.order.form.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+            <field name="picking_policy" position="after">
+                <field name="delivered_amount" widget="monetary"/>
+            </field>
+        </field>
+    </record>
+</odoo>
+

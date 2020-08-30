@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+	<record id="action_report_saleorder" model="ir.actions.report">
+        <field name="name">Hóa đơn XLS</field>
+        <field name="model">sale.order</field>
+        <field name="report_name">hóa đơn</field>
+        <field name="report_type">py3o</field>
+        <field name="py3o_filetype">xls</field>
+        <field name="module">sale_report_py3o</field>
+        <field name="py3o_template_fallback">report/sale_report_py3o.ods</field>
+        <field name="binding_type">report</field>
+        <field name="binding_model_id" ref="sale.model_sale_order"/>
+    </record>
+
+</odoo>

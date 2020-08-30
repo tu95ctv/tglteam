@@ -1,0 +1,53 @@
+
+table.vid_table_border {
+    border: 1px solid;
+    tr {
+        text-align:center;
+        border-top: 1px solid;
+    }
+    th { padding: 1px;
+        border: 1px solid;
+    }
+    td { padding: 1px;
+        border: 1px solid;
+    }
+}
+
+table.vid_table_border_green {
+    border: 1px solid green;
+    tr {
+        text-align:center;
+        border-top: 1px solid green;
+    }
+    th { padding: 1px;
+        border: 1px solid green;
+    }
+    td { padding: 1px;
+        border: 1px solid green;
+    }
+}
+
+
+table.vid_sum_fist_td_right {
+    margin-top:10px;
+    width:100%;
+    tr {
+        
+        border-top: 1px solid
+    }
+    // th { padding: 2px;
+    // }
+    // td {padding: 2px;
+    // }
+    td:first-child {
+    width:50%;
+    text-align:left;
+    }
+    td:nth-child(2) {
+        padding-right: 15px;
+        text-align:right;
+        }
+}
+
+
+

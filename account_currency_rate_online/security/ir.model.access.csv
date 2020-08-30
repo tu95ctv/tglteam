@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_currency_rate_day_history,access_currency_rate_day_history,model_currency_rate_day_history,,1,1,1,1

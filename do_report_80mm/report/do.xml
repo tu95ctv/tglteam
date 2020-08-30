@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="external_layout">
+        <t t-call="web.html_container">
+            <t t-set="company" t-value="doc.company_id"/>
+            <div class="header">
+                <div class="row">
+                    <div class="col-12 text-center">
+                    </div>
+                </div>
+            </div>
+            <div class="article ">
+                <t t-raw="0" />
+                <p style="page-break-after: always;"></p>
+            </div>
+        </t>
+    </template>
+
+    <template id="header">
+        <div class="row">
+            <div class="col-12 text-center">
+                <t t-raw="doc.picking_type_id.warehouse_id.so_receipt_header" />
+            </div>
+        </div>
+        <div class="row" style="margin-top:0px">
+            <div class="col-12" style="text-align:center;font-size:16px;">
+                <b t-esc="title" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s&amp;humanreadable=1'%('Code128', doc.name, 300, 50)" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center font-weight-bold">
+                Khách hàng: <span t-field="doc.partner_id"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <span t-field="doc.partner_id" t-options="{'widget': 'contact', 'fields': ['address', 'phone'], 'phone_icons': True}"/>
+            </div>
+        </div>
+    </template>
+
+    <template id="phieu_giao_hang">
+        <t t-call="do_report_80mm.external_layout">
+            <div class="page" style="font-size:12px;">
+                <t t-call="do_report_80mm.header" />
+                <table class="vid_table_line" style="width: 100%">
+                    <tr>
+                        <th class="text-left">
+                                Sản phẩm
+                        </th>
+                        <th class="text-right">
+                                Số lượng
+                        </th>
+                    </tr>
+                    <div t-foreach="doc.move_ids_without_package" t-as="orderline">
+                        <tr class="font-weight-bold">
+                            <td colspan="5">
+                                <span t-field="orderline.product_id"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-right" colspan="5">
+                                <span groups="uom.group_uom" t-field="orderline.product_uom"/>
+                                <span t-field="orderline.product_uom_qty"/>
+                            </td>
+                        </tr>
+                    </div>
+                </table>
+                <table class="vid_sum" style="width: 100%">
+                    <tr >
+                        <td>Tổng sản phẩm:</td>
+                        <td >
+                            <span t-esc="len(doc.move_ids_without_package.mapped('product_id'))" t-options="{'widget': 'integer'}"/>
+                        </td>
+                    </tr>
+                    <tr >
+                        <td>Tổng Số lượng:</td>
+                        <td >
+                            <span t-esc="sum(doc.move_ids_without_package.mapped('product_uom_qty'))" t-options="{'widget': 'integer'}"/>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+        </t>
+    </template>
+
+
+    <template id="tem">
+        <t t-call="do_report_80mm.external_layout">
+            <div class="page" style="font-size:12px;">
+                <div class="row">
+                    <div class="col-12 text-center" style="text-align:center;font-size:18px;">
+                        <b t-field="doc.picking_type_id.warehouse_id.name" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s&amp;humanreadable=1'%('Code128', doc.name, 300, 50)" />
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-12">
+                        <span class="font-weight-bold ">Tài liệu nguồn: </span>
+                        <span t-field="doc.origin" />
+                        <span class="font-weight-bold ">Ngày dự kiến:</span>
+                        <span t-field="doc.scheduled_date" />
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="picking_order_80mm_doc">
+        <t t-set="title" t-value="'PICKING ORDER'" />
+        <t t-call="do_report_80mm.phieu_giao_hang" />
+        <t t-call="do_report_80mm.tem" />
+        <t t-call="do_report_80mm.tem" />
+    </template>
+
+    <template id="picking_order_80mm">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="do_report_80mm.picking_order_80mm_doc"/>
+            </t>
+        </t>
+    </template>
+
+</odoo>

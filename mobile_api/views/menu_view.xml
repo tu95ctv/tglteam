@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="app_mobile_menu_root" name="App mobile" web_icon="mobile_api,static/description/api_icon.png" sequence="40"/>
+
+    <menuitem id="action_mobile_app_category_menu" name="Category" parent="app_mobile_menu_root" action="action_mobile_app_category" sequence="10"/>
+
+    <menuitem id="action_mobile_app_banner_menu" name="Banners" parent="app_mobile_menu_root" action="action_mobile_app_banners" sequence="20"/>
+
+    <menuitem id="action_mobile_app_slider_menu" name="Slider" parent="app_mobile_menu_root" action="action_mobile_app_slider" sequence="30"/>
+
+    <menuitem id="ecommerce_mobile_more_app_menu" name="More Apps" parent="app_mobile_menu_root" action="action_ecommerce_mobile_more_app" sequence="32"/>
+
+    <record id="action_product_template" model="ir.actions.act_window">
+        <field name="name">Product</field>
+        <field name="res_model">product.template</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="domain">[('published_on_app', '=', True)]</field>
+        <field name="context">{
+            'search_default_consumable': 1, 
+            'default_published_on_app': 1,
+            'default_type': 'product',
+        }</field>
+    </record>
+
+    <menuitem id="action_product_root_menu" name="Products" parent="app_mobile_menu_root" sequence="40"/>
+    <menuitem id="action_product_template_menu" name="Products" parent="action_product_root_menu" action="action_product_template" sequence="10"/>
+    <menuitem id="action_product_images_menu" name="Images" parent="action_product_root_menu" action="action_product_image" sequence="20"/>
+
+    <record model="ir.actions.act_window" id="action_product_brand">
+        <field name="name">Brand</field>
+        <field name="res_model">product.brand</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">kanban,form,tree</field>
+    </record>
+    <menuitem id="action_product_brand_menu" name="Brand" parent="action_product_root_menu" action="action_product_brand" sequence="30"/>
+
+    <menuitem id="action_vidoo_mobile_api_menu" name="Test API" parent="app_mobile_menu_root" action="action_vidoo_mobile_api" sequence="50" groups="base.group_no_one"/>
+
+
+</odoo>

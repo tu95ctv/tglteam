@@ -1,0 +1,44 @@
+<odoo>
+    <!-- account.invoice -->
+    <!-- customer -->
+    <record id="invoice_form_cancel_inherit" model="ir.ui.view">
+            <field name="name">invoice.form.cancel.inherit</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <field name="date_invoice" position="after">
+                  <field name="reason_id" />
+                  <field name="reason_attachment" />
+                </field>
+            </field>
+        </record>
+
+    <!-- account.invoice -->
+    <!-- vendor -->
+    <record id="invoice_supplier_cancel_form_inherit" model="ir.ui.view">
+            <field name="name">invoice.supplier.cancel.form.inherit</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account_cancel.invoice_supplier_cancel_form_inherit"/>
+            <field name="arch" type="xml">
+                <field name="partner_bank_id" position="after">
+                  <field name="reason_id" />
+                  <field name="reason_attachment" />
+                  <field name="reason_attachment_filename" invisible="1" />
+                </field>
+            </field>
+        </record>
+
+    <!-- account.payment 1 cái là đủ -->
+    <record id="payment_cancel_form_inherit" model="ir.ui.view">
+            <field name="name">payment.cancel.form.inherit</field>
+            <field name="model">account.payment</field>
+            <field name="inherit_id" ref="account_cancel.payment_cancel_form_inherit"/>
+            <field name="arch" type="xml">
+                <field name="payment_transaction_id" position="after">
+                  <field name="reason_id" />
+                  <field name="reason_attachment" />
+                  <field name="reason_attachment_filename" invisible="1" />
+                </field>
+            </field>
+        </record>
+    </odoo>

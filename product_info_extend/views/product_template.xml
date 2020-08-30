@@ -1,0 +1,28 @@
+<odoo>
+    <!-- account.invoice -->
+    <!-- customer -->
+    <record id="product_template_form_inherit" model="ir.ui.view">
+            <field name="name">product.template.form.inherit</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view" /> <!--product.product_template_form_view-->
+            <field name="arch" type="xml">
+                <div name="weight" position="after">
+                    <label for="weight_gam"/>
+                    <div class="o_row" name="weight_gam">
+                        <field name="weight_gam" readonly="0" />
+                        <span>gam</span>
+                    </div>
+                </div>
+
+                <div name="volume" position="after">
+                    <label for="volume_ml"/>
+                    <div class="o_row" name="volume_ml">
+                        <field name="volume_ml" readonly="0" />
+                        <span>ml</span>
+                    </div>
+                </div>
+            </field>
+        </record>
+</odoo>
+
+    

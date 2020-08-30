@@ -1,0 +1,98 @@
+<odoo>
+    <data>
+       
+        <record id="sale_customers" model="ks_dashboard_ninja.item">
+            <field name="name">Customers</field>
+            <field name="ks_dashboard_item_type">ks_tile</field>
+            <field name="ks_record_count_type">count</field>
+            <field name="ks_model_id" eval="ref('base.model_res_partner')"/>
+            <field name="ks_domain">[["customer","=",True]]</field>
+            <field name="ks_default_icon">address-book-o</field>
+            <field name="ks_dashboard_item_theme">blue</field>
+            <field name="ks_background_color">#5cb85c,0.99</field>
+            <field name="ks_font_color">#ffffff,0.99</field>
+            <field name="ks_default_icon_color">#ffffff,0.99</field>
+            <field name="ks_layout">layout3</field>
+            <field name="ks_company_id" eval="0"/>
+        </record>
+        
+        <record id="sale_order" model="ks_dashboard_ninja.item">
+            <field name="name">Sale Order</field>
+            <field name="ks_dashboard_item_type">ks_tile</field>
+            <field name="ks_record_count_type">count</field>
+            <field name="ks_model_id" eval="ref('sale.model_sale_order')"/>
+            <field name="ks_domain">[["state","=",'sale']]</field>
+            <field name="ks_default_icon">shopping-cart</field>
+            <field name="ks_dashboard_item_theme">blue</field>
+            <field name="ks_background_color">#337ab7,0.99</field>
+            <field name="ks_font_color">#ffffff,0.99</field>
+            <field name="ks_default_icon_color">#ffffff,0.99</field>
+            <field name="ks_layout">layout3</field>
+            <field name="ks_company_id" eval="0"/>
+        </record>
+
+        <record id="top_customer" model="ks_dashboard_ninja.item">
+            <field name="name">Top customer</field>
+            <field name="ks_background_color">#ffffff,0.99</field>
+            <field name="ks_font_color">#ffffff,0.99</field>
+            <field name="ks_model_id" eval="ref('sale.model_sale_order')"/>
+            <field name="ks_record_count_type">count</field>
+            <field name="ks_dashboard_item_type">ks_bar_chart</field>
+            <field name="ks_domain">[["state","=",'sale']]</field>
+            <field name="ks_default_icon">bar-chart</field>
+            <field name="ks_default_icon_color">#ffffff,0.99</field> <!-- no change -->
+            <field name="ks_dashboard_item_theme">blue</field> <!-- no change -->
+            <field name="ks_layout">layout1</field>
+            <field name="ks_company_id" eval="0"/> <!-- no change -->
+            <field name="ks_chart_measure_field" eval="[(4,ref('sale.field_sale_order__amount_tax')), (4,ref('sale.field_sale_order__amount_total'))]" />
+            <field name="ks_chart_data_count_type">sum</field>
+            <field name="ks_chart_relation_groupby" ref="sale.field_sale_order__partner_id"/>
+            <field name="ks_chart_groupby_type">relational_type</field>
+        </record>
+        
+        <record id="last_5_months_sale" model="ks_dashboard_ninja.item">
+            <field name="name">Last 5 Months Sale</field>
+            <field name="ks_background_color">#ffffff,0.99</field>
+            <field name="ks_font_color">#ffffff,0.99</field>
+            <field name="ks_domain">[["state","=",'sale']]</field>
+            <field name="ks_model_id" eval="ref('sale.model_sale_order')"/>
+            <field name="ks_record_count_type">count</field>
+            <field name="ks_dashboard_item_type">ks_bar_chart</field>
+            <field name="ks_default_icon">bar-chart</field>
+            <field name="ks_default_icon_color">#ffffff,0.99</field> <!-- no change -->
+            <field name="ks_dashboard_item_theme">blue</field> <!-- no change -->
+            <field name="ks_layout">layout1</field>
+            <field name="ks_company_id" eval="0"/> <!-- no change -->
+            <field name="ks_chart_measure_field" eval="[(4,ref('sale.field_sale_order__amount_total')), (4,ref('sale.field_sale_order__amount_tax')),(4,ref('sale.field_sale_order__amount_untaxed'))]" />
+            <field name="ks_chart_data_count_type">sum</field>
+            <field name="ks_chart_groupby_type">date_type</field>
+            <field name="ks_chart_relation_groupby" ref="sale.field_sale_order__date_order"/>
+            <field name="ks_chart_date_groupby">month</field>
+        </record>
+   
+         <record id="ks_template_sale" model="ks_dashboard_ninja.board_template">
+            <field name="name">Bán hàng</field>
+            <field name="ks_gridstack_config">
+                [
+                {"item_id":"template_dashboard_ninja.sale_customers", "data": {"x":0,"y":0,"width":9,"height":2}},
+                {"item_id":"template_dashboard_ninja.sale_order", "data": {"x":9,"y":0,"width":8,"height":2}},
+                {"item_id":"template_dashboard_ninja.top_customer", "data": {"x":0,"y":2,"width":26,"height":3}},
+                {"item_id":"template_dashboard_ninja.last_5_months_sale", "data": {"x":0,"y":9,"width":13,"height":4}}
+                ]
+            </field>
+            <field name="ks_item_count">1</field>
+        </record>
+
+
+        <record id="gen_sale_dashboard" model="ks_dashboard_ninja.board">
+            <field name="name">Thống Kê Bán Hàng</field>
+            <field name="ks_dashboard_menu_name">Thống Kê Bán hàng</field>
+            <field name="ks_dashboard_top_menu_id" eval="ref('sale.sale_menu_root')"/>
+            <field name="ks_dashboard_default_template" eval="ref('ks_template_sale')"/>
+            <field name="ks_dashboard_active">1</field>
+            <field name="ks_dashboard_group_access" eval="False"/>
+            <field name="ks_dashboard_menu_sequence">1</field>
+        </record>
+
+    </data>
+</odoo>

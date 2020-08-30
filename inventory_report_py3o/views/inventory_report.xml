@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="inventory_report_view_form" model="ir.ui.view">
+        <field name="name">vio.inventory.report.form</field>
+        <field name="model">vio.inventory.report</field>
+        <field name="inherit_id" ref="inventory_report.inventory_report_view_form"/>
+        <field name="arch" type="xml">
+            <button name="action_get_data_inventory_report_line" position="after">
+                <button name="export_to_excel" string="Xuất Excel" type="object" />
+            </button>
+        </field>
+    </record>
+
+</odoo>

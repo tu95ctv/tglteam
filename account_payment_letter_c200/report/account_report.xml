@@ -1,0 +1,28 @@
+<odoo>
+    <record id="paperformat_payment_A5" model="report.paperformat">
+            <field name="name">Phiếu thu chi A5</field>
+            <field name="default" eval="True" />
+            <field name="format">A5</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">17</field>
+            <field name="margin_bottom">0</field>
+            <field name="margin_left">7</field>
+            <field name="margin_right">7</field>
+            <field name="header_line" eval="False" />
+            <field name="header_spacing">14</field>
+            <field name="dpi">90</field>
+        </record>
+
+    <report
+        id="action_report_payment_receipt"
+        model="account.payment"
+        string="Payment Receipt c200"
+        report_type="qweb-pdf"
+        name="account_payment_letter_c200.report_payment_receipt"
+        file="account_payment_letter_c200.report_payment_receipt"
+        menu="True"
+        paperformat="account_payment_letter_c200.paperformat_payment_A5"
+    />
+</odoo>

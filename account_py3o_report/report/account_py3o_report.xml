@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+	<record id="action_accounting_report" model="ir.actions.report">
+        <field name="name">BẢNG CÂN ĐỐI KẾ TOÁN XLS</field>
+        <field name="model">accounting.report</field>
+        <field name="report_name">BẢNG CÂN ĐỐI KẾ TOÁN</field>
+        <field name="report_type">py3o</field>
+        <field name="py3o_filetype">xls</field>
+        <field name="module">account_py3o_report</field>
+        <field name="py3o_template_fallback">report/ban_can_doi_ke_toan.ods</field>
+        <field name="binding_type">report</field>
+        <field name="binding_model_id" ref="accounting_pdf_reports.model_accounting_report"/>
+    </record>
+
+    <record id="action_account_report_general_ledge_p3o" model="ir.actions.report">
+        <field name="name">SỔ NHẬT KÝ CHUNG xls</field>
+        <field name="model">account.report.general.ledger</field>
+        <field name="report_name">SỔ NHẬT KÝ CHUNG</field>
+        <field name="report_type">py3o</field>
+        <field name="py3o_filetype">xls</field>
+        <field name="module">account_py3o_report</field>
+        <field name="py3o_template_fallback">report/so_nhat_ky_chung.ods</field>
+        <field name="binding_type">report</field>
+        <field name="binding_model_id" ref="accounting_pdf_reports.model_account_report_general_ledger"/>
+    </record>
+
+    <record id="action_account_report_partner_ledger_p3o" model="ir.actions.report">
+        <field name="name">DANH MỤC CÔNG NỢ xls</field>
+        <field name="model">account.report.partner.ledger</field>
+        <field name="report_name">DANH MỤC CÔNG NỢ</field>
+        <field name="report_type">py3o</field>
+        <field name="py3o_filetype">xls</field>
+        <field name="module">account_py3o_report</field>
+        <field name="py3o_template_fallback">report/danh_muc_cong_no.ods</field>
+        <field name="binding_type">report</field>
+        <field name="binding_model_id" ref="accounting_pdf_reports.model_account_report_partner_ledger"/>
+    </record>
+
+    <record id="action_account_aged_trial_balance_p3o" model="ir.actions.report">
+        <field name="name">BẢNG CÂN ĐỐI TUỔI NỢ xls</field>
+        <field name="model">account.aged.trial.balance</field>
+        <field name="report_name">BẢNG CÂN ĐỐI TUỔI NỢ</field>
+        <field name="report_type">py3o</field>
+        <field name="py3o_filetype">xls</field>
+        <field name="module">account_py3o_report</field>
+        <field name="py3o_template_fallback">report/bang_can_doi_tuoi_no.ods</field>
+        <field name="binding_type">report</field>
+        <field name="binding_model_id" ref="accounting_pdf_reports.model_account_aged_trial_balance"/>
+    </record>
+
+    <record id="action_account_balance_report_p3o" model="ir.actions.report">
+        <field name="name">BẢNG CÂN ĐỐI PHÁT SINH xls</field>
+        <field name="model">account.balance.report</field>
+        <field name="report_name">BẢNG CÂN ĐỐI PHÁT SINH</field>
+        <field name="report_type">py3o</field>
+        <field name="py3o_filetype">xls</field>
+        <field name="module">account_py3o_report</field>
+        <field name="py3o_template_fallback">report/bang_can_doi_phat_sinh.ods</field>
+        <field name="binding_type">report</field>
+        <field name="binding_model_id" ref="accounting_pdf_reports.model_account_balance_report"/>
+    </record>
+
+    <record id="action_account_tax_report_p3o" model="ir.actions.report">
+        <field name="name">TAX REPORT xls</field>
+        <field name="model">account.tax.report</field>
+        <field name="report_name">TAX REPORT</field>
+        <field name="report_type">py3o</field>
+        <field name="py3o_filetype">xls</field>
+        <field name="module">account_py3o_report</field>
+        <field name="py3o_template_fallback">report/thue.ods</field>
+        <field name="binding_type">report</field>
+        <field name="binding_model_id" ref="accounting_pdf_reports.model_account_tax_report"/>
+    </record>
+
+
+
+
+
+
+
+
+</odoo>

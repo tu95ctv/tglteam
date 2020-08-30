@@ -1,0 +1,98 @@
+<odoo>
+  <record id="vidoo_voip_tree" model="ir.ui.view">
+    <field name="name">vidoo.voip.tree</field>
+    <field name="model">vidoo.voip</field>
+    <field name="arch" type="xml">
+        <tree>
+            <field name="caller_number"/>
+            <field name="dial_number"/>
+            <field name="start_time"/>
+            <field name="wait_time" widget="float_time"/>
+            <field name="duration" widget="float_time"/>
+            <field name="state"/>
+            <field name="type"/>
+            <field name="record_file_link_html" />
+            <field name="customer_id"/>
+            <field name="address"/>
+            <field name="sale_order_id"/>
+            <field name="product_ids" widget="many2many_tags"/>
+        </tree>
+    </field>
+  </record>
+
+  <record id="vidoo_voip_form" model="ir.ui.view">
+    <field name="name">vidoo.voip.form</field>
+    <field name="model">vidoo.voip</field>
+    <field name="arch" type="xml">
+      <form string="VOIP">
+        <sheet>
+            <label for="caller_number" string="Số gọi đi"/>
+              <h1>
+                  <field name="caller_number"/>
+              </h1>
+            <group>
+              <group>
+                <field name="dial_number"/>
+                <field name="start_time"/>
+                <field name="wait_time" widget="float_time"/>
+                <field name="duration" widget="float_time"/>
+                <field name="state"/>
+                <field name="record_file_link"/>
+              </group>
+              <group>
+                <field name="type"/>
+                <field name="customer_id"/>
+                <field name="address"/>
+                <field name="sale_order_id"/>
+                <field name="product_ids" widget="many2many_tags"/>
+              </group>
+            </group>
+            <notebook>
+              <page string="Ghi chú">
+                  <field name="record_file_link_html" />
+              </page>
+            </notebook>
+          </sheet>
+          <div class="oe_chatter">
+            <field name="message_follower_ids" widget="mail_followers"/>
+            <field name="message_ids" widget="mail_thread"/>
+          </div>
+        </form>
+    </field>
+  </record>
+
+  <record id="vidoo_voip_search" model="ir.ui.view">
+            <field name="name">vidoo.voip.search</field>
+            <field name="model">vidoo.voip</field>
+            <field name="arch" type="xml">
+                <search string="Voip">
+                  <field name="caller_number"/>
+                  <field name="dial_number"/>
+                  <!-- <field name="start_time"/>
+                  <field name="wait_time" widget="float_time"/>
+                  <field name="duration" widget="float_time"/> -->
+                  <field name="state"/>
+                  <field name="type"/>
+                  <!-- <field name="record_file_link_html" /> -->
+                  <field name="customer_id"/>
+                  <field name="address"/>
+                  <field name="sale_order_id"/>
+                  <field name="product_ids"/>
+                </search>
+            </field>
+  </record>
+
+
+  <record id="vidoo_voip_action" model="ir.actions.act_window">
+    <field name="name">VOIP</field>
+    <field name="res_model">vidoo.voip</field>
+    <field name="view_mode">tree,form</field>
+    <field name="context">{}</field>
+  </record>
+
+        
+
+  <menuitem id="voip_menu" name="VOIP" sequence="10" web_icon="vidoo_voip,static/img/logo.png" />
+
+  <menuitem id="vidoo_voip" parent="voip_menu" name="VOIP" action="vidoo_voip_action" sequence="10"/>
+</odoo>

@@ -1,0 +1,427 @@
+<odoo>
+    <template id="tb_53_Statistics_With_Subtitle" name="tb_53_Statistics_With_Subtitle">
+    <div class="col-xl-6 col-md-12">
+        <div class="card mono-card overflow-hidden">
+            <div class="card-content">
+                <div class="card-body cleartfix">
+                    <div class="media align-items-stretch">
+                        <div class="align-self-center">
+                            <i class="icon-pencil primary font-large-2 mr-4"></i>
+                        </div>
+                        <tr t-as="line" t-foreach="config.line_ids">
+                            <div class="media-body">
+                                <h4 t-esc="line.name"></h4>
+                                <span t-esc="line.name"></span>
+                            </div>
+                        
+                            <div class="align-self-center">
+                                <h1><span t-esc="line.value_char"></span></h1>
+                            </div>
+                        </tr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_53_Statistics_With_Subtitle" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_54_Statistics_With_Subtitle" name="tb_54_Statistics_With_Subtitle">
+    <div class="col-xl-6 col-md-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="card-body cleartfix">
+                    <div class="media align-items-stretch">
+                        <div class="align-self-center">
+                            <i class="icon-speech warning font-large-2 mr-4"></i>
+                        </div>
+                        <tr t-as="line" t-foreach="config.line_ids">
+                            <div class="media-body">
+                                <h4 t-esc="line.name"></h4>
+                                <span t-esc="line.name"></span>
+                            </div>
+                        
+                            <div class="align-self-center">
+                                <h1><span t-esc="line.value_char"></span></h1>
+                                
+                            </div>
+                        </tr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_54_Statistics_With_Subtitle" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_55_Statistics_With_Subtitle" name="tb_55_Statistics_With_Subtitle">
+    <div class="col-xl-6 col-md-12">
+        <div class="card">
+            <div class="card-content">
+                <div class="card-body cleartfix">
+                    <div class="media align-items-stretch">
+                        <tr t-as="line" t-foreach="config.line_ids">
+                            <div class="align-self-center">
+                                <h1 class="mr-4"><span t-esc="line.value_char"></span></h1>
+                            </div>
+                            
+                                <div class="media-body">
+                                    <h4 t-esc="line.name"></h4>
+                                    <span t-esc="line.name"></span>
+                                </div>
+                        </tr>
+                        <div class="align-self-center">
+                            <i class="icon-heart danger font-large-2"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_55_Statistics_With_Subtitle" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_56_Statistics_With_Subtitle" name="tb_56_Statistics_With_Subtitle">
+    <div class="col-xl-6 col-md-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="card-body cleartfix">
+                    <div class="media align-items-stretch">
+                        <tr t-as="line" t-foreach="config.line_ids">
+                            <div class="align-self-center">
+                                <h1 class="mr-4"><span t-esc="line.value_char"></span></h1>
+                            </div>
+                        
+                            <div class="media-body">
+                                <h4 t-esc="line.name"></h4>
+                                <span t-esc="line.name"></span>
+                            </div>
+                        </tr>
+                        <div class="align-self-center">
+                            <i class="icon-wallet success font-large-2"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_56_Statistics_With_Subtitle" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_57_Statistics_With_Icon_Section_and_Subtitle" name="tb_57_Statistics_With_Icon_Section_and_Subtitle">
+    <div class="col-xl-6 col-md-12">
+        <div class="card mono-card overflow-hidden">
+            <div class="card-content">
+                <div class="media align-items-stretch">
+                    <div class="bg-primary p-4 media-middle">
+                        <i class="icon-pencil font-large-2 white"></i>
+                    </div>
+                    <tr t-as="line" t-foreach="config.line_ids">
+                        <div class="media-body p-4">
+                            <h4 t-esc="line.name"></h4>
+                            <span t-esc="line.name"></span>
+                        </div>
+                    
+                        <div class="media-right p-4 media-middle">
+                            <h1 class="primary"><span t-esc="line.value_char"></span></h1>
+                        </div>
+                    </tr>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_57_Statistics_With_Icon_Section_and_Subtitle" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_58_Statistics_With_Icon_Section_and_Subtitle" name="tb_58_Statistics_With_Icon_Section_and_Subtitle">
+    <div class="col-xl-6 col-md-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="media align-items-stretch">
+                    <div class="bg-warning p-4 media-middle">
+                        <i class="icon-speech font-large-2 white"></i>
+                    </div>
+                    <tr t-as="line" t-foreach="config.line_ids">
+                        <div class="media-body p-4">
+                            <h4 t-esc="line.name"></h4>
+                            <span t-esc="line.name"></span>
+                        </div>
+                    
+                        <div class="media-right p-4 media-middle">
+                            <h1 class="warning"><span t-esc="line.value_char"></span></h1>
+                        </div>
+                    </tr>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_58_Statistics_With_Icon_Section_and_Subtitle" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_59_Statistics_With_Icon_Section_and_Subtitle" name="tb_59_Statistics_With_Icon_Section_and_Subtitle">
+    <div class="col-xl-6 col-md-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="media align-items-stretch">
+                <tr t-as="line" t-foreach="config.line_ids">
+                        <div class="p-4 media-middle">
+                            <h1 class="danger"><span t-esc="line.value_char"></span></h1>
+                        </div>
+                    
+                        <div class="media-body p-4">
+                            <h4 t-esc="line.name"></h4>
+                            <span t-esc="line.name"></span>
+                        </div>
+                    </tr>
+                    <div class="media-right bg-danger p-4 media-middle">
+                        <i class="icon-heart font-large-2 white"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_59_Statistics_With_Icon_Section_and_Subtitle" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_60_Statistics_With_Icon_Section_and_Subtitle" name="tb_60_Statistics_With_Icon_Section_and_Subtitle">
+    <div class="col-xl-6 col-md-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="media align-items-stretch">
+                    <tr t-as="line" t-foreach="config.line_ids">
+                        <div class="p-4 media-middle">
+                            <h1 class="success"><span t-esc="line.value_char"></span></h1>
+                        </div>
+                    
+                        <div class="media-body p-4">
+                            <h4 t-esc="line.name"></h4>
+                            <span t-esc="line.name"></span>
+                        </div>
+                    </tr>
+                    <div class="media-right bg-success p-4 media-middle">
+                        <i class="icon-wallet font-large-2 white"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_60_Statistics_With_Icon_Section_and_Subtitle" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_61_Statistics_With_Icon_Section_Subtitle_and_Bg_Color" name="tb_61_Statistics_With_Icon_Section_Subtitle_and_Bg_Color">
+    <div class="col-xl-6 col-md-12">
+        <div class="card mono-card overflow-hidden">
+            <div class="card-content">
+                <div class="media align-items-stretch bg-primary white">
+                    <div class="bg-primary bg-darken-2 p-4 media-middle">
+                        <i class="icon-pencil font-large-2 white"></i>
+                    </div>
+                    <tr t-as="line" t-foreach="config.line_ids">
+                        <div class="media-body p-4">
+                            <h4 t-esc="line.name"></h4>
+                            <span t-esc="line.name"></span>
+                        </div>
+                    
+                        <div class="media-right p-4 media-middle">
+                            <h1><span t-esc="line.value_char"></span></h1>
+                        </div>
+                    </tr>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_61_Statistics_With_Icon_Section_Subtitle_and_Bg_Color" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_62_Statistics_With_Icon_Section_Subtitle_and_Bg_Color" name="tb_62_Statistics_With_Icon_Section_Subtitle_and_Bg_Color">
+    <div class="col-xl-6 col-md-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="media align-items-stretch bg-warning white">
+                    <div class="bg-warning bg-darken-2 p-4 media-middle">
+                        <i class="icon-speech font-large-2 white"></i>
+                    </div>
+                    <tr t-as="line" t-foreach="config.line_ids">
+                        <div class="media-body p-4">
+                            <h4 t-esc="line.name"></h4>
+                            <span t-esc="line.name"></span>
+                        </div>
+                    
+                        <div class="media-right p-4 media-middle">
+                            <h1><span t-esc="line.value_char"></span></h1>
+                        </div>
+                    </tr>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_62_Statistics_With_Icon_Section_Subtitle_and_Bg_Color" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_63_Statistics_With_Icon_Section_Subtitle_and_Bg_Color" name="tb_63_Statistics_With_Icon_Section_Subtitle_and_Bg_Color">
+    <div class="col-xl-6 col-md-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="media align-items-stretch bg-danger white">
+                    <tr t-as="line" t-foreach="config.line_ids">
+                        <div class="p-4 media-middle">
+                            <h1><span t-esc="line.value_char"></span></h1>
+                        </div>
+                    
+                        <div class="media-body p-4">
+                            <h4 t-esc="line.name"></h4>
+                            <span t-esc="line.name"></span>
+                        </div>
+                    </tr>
+                    <div class="media-right bg-danger bg-darken-2 p-4 media-middle">
+                        <i class="icon-heart font-large-2 white"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_63_Statistics_With_Icon_Section_Subtitle_and_Bg_Color" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_64_Statistics_With_Icon_Section_Subtitle_and_Bg_Color" name="tb_64_Statistics_With_Icon_Section_Subtitle_and_Bg_Color">
+    <div class="col-xl-6 col-md-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="media align-items-stretch bg-success white">
+                    <tr t-as="line" t-foreach="config.line_ids">
+                        <div class="p-4 media-middle">
+                            <h1><span t-esc="line.value_char"></span></h1>
+                        </div>
+                    
+                        <div class="media-body p-4">
+                            <h4 t-esc="line.name"></h4>
+                            <span t-esc="line.name"></span>
+                        </div>
+                    </tr>
+                    <div class="media-right bg-success bg-darken-2 p-4 media-middle">
+                        <i class="icon-wallet font-large-2 white"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_64_Statistics_With_Icon_Section_Subtitle_and_Bg_Color" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_65_Statistics_With_Icon_Section_Subtitle_and_Bg_Gradient_Color" name="tb_65_Statistics_With_Icon_Section_Subtitle_and_Bg_Gradient_Color">
+    <div class="col-xl-6 col-md-12">
+        <div class="card mono-card overflow-hidden">
+            <div class="card-content">
+                <div class="media align-items-stretch bg-gradient-x-primary white">
+                    <div class="p-4 media-middle">
+                        <i class="icon-pencil font-large-2 white"></i>
+                    </div>
+                    <tr t-as="line" t-foreach="config.line_ids">
+                        <div class="media-body p-4">
+                            <h4 t-esc="line.name"></h4>
+                            <span t-esc="line.name"></span>
+                        </div>
+                    
+                        <div class="media-right p-4 media-middle">
+                            <h1><span t-esc="line.value_char"></span></h1>
+                        </div>
+                    </tr>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_65_Statistics_With_Icon_Section_Subtitle_and_Bg_Gradient_Color" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_66_Statistics_With_Icon_Section_Subtitle_and_Bg_Gradient_Color" name="tb_66_Statistics_With_Icon_Section_Subtitle_and_Bg_Gradient_Color">
+    <div class="col-xl-6 col-md-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="media align-items-stretch bg-gradient-x-warning white">
+                    <div class="p-4 media-middle">
+                        <i class="icon-speech font-large-2 white"></i>
+                    </div>
+                    <tr t-as="line" t-foreach="config.line_ids">
+                        <div class="media-body p-4">
+                            <h4 t-esc="line.name"></h4>
+                            <span t-esc="line.name"></span>
+                        </div>
+                    
+                    <div class="media-right p-4 media-middle">
+                        <h1><span t-esc="line.value_char"></span></h1>
+                    </div>
+                    </tr>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_66_Statistics_With_Icon_Section_Subtitle_and_Bg_Gradient_Color" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_67_Statistics_With_Icon_Section_Subtitle_and_Bg_Gradient_Color" name="tb_67_Statistics_With_Icon_Section_Subtitle_and_Bg_Gradient_Color">
+    <div class="col-xl-6 col-md-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="media align-items-stretch bg-gradient-x-danger white">
+                    <tr t-as="line" t-foreach="config.line_ids">
+                    <div class="p-4 media-middle">
+                        <h1><span t-esc="line.value_char"></span></h1>
+                    </div>
+                    
+                        <div class="media-body p-4">
+                            <h4 t-esc="line.name"></h4>
+                            <span t-esc="line.name"></span>
+                        </div>
+                    </tr>
+                    <div class="media-right p-4 media-middle">
+                        <i class="icon-heart font-large-2 white"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_67_Statistics_With_Icon_Section_Subtitle_and_Bg_Gradient_Color" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_68_Statistics_With_Icon_Section_Subtitle_and_Bg_Gradient_Color" name="tb_68_Statistics_With_Icon_Section_Subtitle_and_Bg_Gradient_Color">
+    <div class="col-xl-6 col-md-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="media align-items-stretch bg-gradient-x-success white">
+                    <tr t-as="line" t-foreach="config.line_ids">
+                        <div class="p-4 media-middle">
+                            <h1><span t-esc="line.value_char"></span></h1>
+                        </div>
+                    
+                        <div class="media-body p-4">
+                            <h4 t-esc="line.name"></h4>
+                            <span t-esc="line.name"></span>
+                        </div>
+                    </tr>
+                    <div class="media-right p-4 media-middle">
+                        <i class="icon-wallet font-large-2 white"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_68_Statistics_With_Icon_Section_Subtitle_and_Bg_Gradient_Color" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+</odoo>

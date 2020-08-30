@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- App ecommerce.mobile.app.category -->
+    <record model="ir.ui.view" id="view_mobile_app_category_tree">
+        <field name="name">ecommerce.mobile.app.category.tree</field>
+        <field name="model">ecommerce.mobile.app.category</field>
+        <field name="arch" type="xml">
+            <tree string="Mobile App Categories">
+                <field name="sequence" widget="handle"/>
+                <field name="image" widget="image" class="oe_avatar" width="100" height="100"/>
+                <field name="name"/>
+                <field name="parent_id"/>
+                <field name="type"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_mobile_app_category_form">
+        <field name="name">ecommerce.mobile.app.category.form</field>
+        <field name="model">ecommerce.mobile.app.category</field>
+        <field name="arch" type="xml">
+            <form string="Mobile App Categories">                
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                            <field name="active" widget="boolean_button" options="{'terminology': 'archive'}"/>
+                        </button>
+                    </div>
+                    <field name="image" widget="image" class="oe_avatar" />
+                     <!-- options="{'preview_image': 'image_medium', 'size': [90, 90]}"/> -->
+                    <div class="oe_title">
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="parent_id"/>
+                            <field name="image_url" widget="url"/>
+                        </group>
+                        <group>
+                            <field name="type"/>
+                            <field name="sequence"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_mobile_app_category" model="ir.actions.act_window">
+        <field name="name">Mobile App Categories</field>
+        <field name="res_model">ecommerce.mobile.app.category</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!-- END: ecommerce.mobile.app.category -->
+
+
+
+    <!-- ecommerce.mobile.app.banner -->
+    <record model="ir.ui.view" id="view_mobile_app_banner_tree">
+        <field name="name">ecommerce.mobile.app.banner.tree</field>
+        <field name="model">ecommerce.mobile.app.banner</field>
+        <field name="arch" type="xml">
+            <tree string="Banners">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="action"/>
+                <field name="publish_date"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_mobile_app_banner_form">
+        <field name="name">ecommerce.mobile.app.banner.form</field>
+        <field name="model">ecommerce.mobile.app.banner</field>
+        <field name="arch" type="xml">
+            <form string="Banners">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                            <field name="active" widget="boolean_button" options="{'terminology': 'archive'}"/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="action"/>
+                            <field name="url"/>                             
+                        </group>
+                        <group>
+                            <field name="category_id" attrs="{'invisible': [('action','not in', ['product','category'])], 'required': [('action','in', ['product','category'])]}"/>
+                            <field name="publish_date"/>
+                            <field name="sequence"/>
+                        </group>
+                    </group>
+                    <separator string="Custom Collection" attrs="{'invisible': [('action','!=', 'custom')]}"/>
+                    <field name="product_ids" attrs="{'invisible': [('action','!=', 'custom')]}">
+                        <tree string="Custom Collection" editable="bottom">
+                            <field name="name"/>
+                            <field name="ecommerce_mobile_app_categ_ids" widget="many2many_tags"/>
+                        </tree>
+                    </field>
+                    <separator string="Description"/>
+                    <field name="description"/>
+                    <field name="image" widget="image"/>
+                    <field name="image_url" widget="url"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_mobile_app_banners" model="ir.actions.act_window">
+        <field name="name">Banners</field>
+        <field name="res_model">ecommerce.mobile.app.banner</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!-- END: ecommerce.mobile.app.banner -->
+
+
+
+    <!-- ecommerce.mobile.app.slider -->
+    <record model="ir.ui.view" id="view_mobile_app_slider_tree">
+        <field name="name">ecommerce.mobile.app.slider.tree</field>
+        <field name="model">ecommerce.mobile.app.slider</field>
+        <field name="arch" type="xml">
+            <tree string="Slider">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="mode"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_mobile_app_slider_form">
+        <field name="name">ecommerce.mobile.app.slider.form</field>
+        <field name="model">ecommerce.mobile.app.slider</field>
+        <field name="arch" type="xml">
+            <form string="Slider">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                            <field name="active" widget="boolean_button" options="{'terminology': 'archive'}"/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1><field name="name"/></h1>
+                    </div>
+                    <group string="Product Selection">
+                        <group>
+                            <field name="product_selection"/>
+                            <field name="based_on" attrs="{'invisible': [('product_selection','!=','automatic')], 'required': [('product_selection','=','automatic')]}"/>
+                        </group>
+                        <group>
+                            <field name="product_ids" widget="many2many_tags" attrs="{                         'invisible': [('product_selection','!=','manual')],                         'required': [('product_selection','=','manual')]}"/>
+                            <field name="categ_id" attrs="{                         'invisible': ['|',('product_selection','!=','automatic'),('based_on','!=','internal_category')],                         'required': [('product_selection','=','automatic'),('based_on','=','internal_category')]}"/>
+                            <field name="mobile_app_categ_id" attrs="{                         'invisible': ['|',('product_selection','!=','automatic'),('based_on','!=','mobile_category')],                         'required': [('product_selection','=','automatic'),('based_on','=','mobile_category')]}"/>
+                            <field name="description"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="General Information">
+                            <group>
+                                <group>
+                                    <field name="sequence"/>
+                                    <field name="mode"/>
+                                    <field name="product_image_position"/>
+                                </group>
+                                <group>
+                                    <field name="max_product_in_slider"/>
+                                    <field name="product_per_row"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_mobile_app_slider" model="ir.actions.act_window">
+        <field name="name">Slider</field>
+        <field name="res_model">ecommerce.mobile.app.slider</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!-- END: ecommerce.mobile.app.slider -->
+
+
+
+    <!-- ecommerce.mobile.app.slider -->
+    <record model="ir.ui.view" id="view_ecommerce_mobile_more_app_tree">
+        <field name="name">ecommerce.mobile.more.app.tree</field>
+        <field name="model">ecommerce.mobile.more.app</field>
+        <field name="arch" type="xml">
+            <tree string="More Application" editable="bottom">
+                <field name="sequence" widget="handle"/>
+                <field name="title"/>
+                <field name="image_url" widget="url"/>
+                <field name="open_url" widget="url"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_ecommerce_mobile_more_app" model="ir.actions.act_window">
+        <field name="name">More Application</field>
+        <field name="res_model">ecommerce.mobile.more.app</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+</odoo>

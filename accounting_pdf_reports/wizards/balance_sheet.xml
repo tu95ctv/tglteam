@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- <record id="account_financial_report_balancesheet0" model="account.financial.report">
+        <field name="name">Balance sheet</field>
+        <field name="type">sum</field>
+    </record> -->
+
+    <!-- QTH -->
+    <record id="account_financial_report_bs0" model="account.financial.report">
+        <field name="name">BẢNG CÂN ĐỐI KẾ TOÁN</field>
+        <field name="full_name">BẢNG CÂN ĐỐI KẾ TOÁN</field>
+        <field name="type">sum</field>
+        <field name="right_header"><![CDATA[
+<div>Mẫu số B 01 – DN</div>
+<div>(Ban hành theo Thông tư số 200/2014/TT-BTC</div>
+<div>Ngày 22/12/2014 của Bộ Tài chính)</div>
+        ]]></field>
+    </record>
+    
+    <record id="accounting_report_view" model="ir.ui.view">
+        <field name="name">Accounting Report</field>
+        <field name="model">accounting.report</field>
+        <field name="inherit_id" ref="account.account_common_report_view"/>
+        <field name="arch" type="xml">
+            <field name="target_move" position="before">
+                <field name="account_report_id" domain="[('parent_id','=',False)]" groups="base.group_no_one"/>
+            </field>
+            <field name="target_move" position="after">
+                <field name="enable_filter" invisible="1"/>
+                <field name="debit_credit" attrs="{'invisible': [('enable_filter','=',True)]}"/>
+            </field>
+            <field name="journal_ids" position="after">
+                <notebook tabpos="up" colspan="4">
+                    <page string="Chi tiết" name="page_result_html">
+                        <field name="result_html"/>
+                    </page>
+                    <page string="Comparison" name="comparison" attrs="{'invisible': [('enable_filter','=',False)]}">
+                        <group>
+                            <field name="label_filter" attrs="{'required': [('enable_filter', '=', True)]}"/>
+                            <field name="filter_cmp"/>
+                        </group>
+                        <group string="Dates" attrs="{'invisible':[('filter_cmp', '!=', 'filter_date')]}">
+                            <field name="date_from_cmp" attrs="{'required':[('filter_cmp', '=', 'filter_date')]}"/>
+                            <field name="date_to_cmp" attrs="{'required':[('filter_cmp', '=', 'filter_date')]}"/>
+                        </group>
+                    </page>
+                </notebook>
+            </field>
+            <field name="journal_ids" position="replace"/>
+            <footer position="replace"/>
+            <group position="before">
+                <header>
+                    <button name="tgl_get_data" string="Lấy dữ liệu" type="object" class="oe_highlight"/>
+                    <button name="check_report" string="Xuất PDF" type="object" class="oe_highlight"/>
+                </header>
+            </group>
+            <field name="account_report_id" position="after">
+                <!-- <field name="report_template_id"/> -->
+                <field name="range_id" options="{'no_create': 1}"/>
+            </field>
+            <field name="date_from" position="attributes">
+                <!-- <attribute name="attrs">{'invisible': [('range_id', '!=', False)]}</attribute> -->
+                <attribute name="invisible">1</attribute>
+            </field>
+            <field name="date_to" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+        </field>
+    </record>
+
+    <record id="action_account_report_bs" model="ir.actions.act_window">
+        <field name="name">Bảng cân đối kế toán</field>
+        <field name="res_model">accounting.report</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="accounting_report_view"/>
+        <field name="target">current</field>
+        <field name="context" eval="{'default_account_report_id':ref('accounting_pdf_reports.account_financial_report_bs0')}"/>
+    </record>
+
+</odoo>

@@ -1,0 +1,48 @@
+<odoo>
+    <data>
+        <!-- <template id="main_table_data" name="main_table_data">
+            <div t-att-class ="('col-%s'%config.col_size if config.col_size else 'col')" >
+                <div t-att-class="'card' if config.bg_option=='image' else 'card %s'%'bg-info'" t-att-style="'background-image:url(\'/web/image/summary.report.config/' + str(config.id) + '/bg_image/\')' if config.bg_option=='image' else None" >
+                    <div class="card-body" >
+                        <table class="table table-sm report-sum-table">
+                            <thead>
+                                <tr>
+                                    <th>Title</th>
+                                    <th>Count</th>
+                                    <th>Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr t-foreach="config.line_ids" t-as="line" >
+                                    <td><span  t-esc="line.name"></span></td>
+                                    <td><span  t-esc="line.count"></span></td>
+                                    <td >
+                                        <span  t-esc="line.value_char" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <record id="main_table_data" model="ir.ui.view">
+            <field name="is_banner_template">1</field>
+        </record>
+        
+       
+         -->
+<!-- sale_quotation_onboarding_panel_overwrite -->
+
+        <template id="sale_quotation_onboarding_panel_overwrite" name="web_banner_configuration.quotation.onboarding.panel.overwrite">
+            <div class="row" style="padding: 10px 0px 0px 10px">
+                <t t-set="obj" t-value="request.env['sale.order']"/>
+                <t t-foreach="configs" t-as="config" >
+                    <t t-raw="config.table_html"/>
+                </t>
+            </div>
+        </template>
+   
+    </data>
+</odoo>

@@ -1,0 +1,9 @@
+<odoo>
+    <data>
+        <template id="assets_common" name="tours assets" inherit_id="web.report_assets_common">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" type="text/scss" href="/so_report_80mm_stv/static/src/scss/so.scss"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

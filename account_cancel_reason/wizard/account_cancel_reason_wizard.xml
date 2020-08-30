@@ -1,0 +1,40 @@
+<odoo>
+     <record id="account_cancel_reason_wizard_form" model="ir.ui.view">
+            <field name="name">account_cancel_reason_wizard_form</field>
+            <field name="model">account.cancel.reason.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Nhập Lý do">
+                    <p class="oe_grey">
+                        Vui lòng nhập lý do để xóa.
+                    </p>
+                    <group>
+                       <field name="reason_id" />
+                       <field name="reason_attachment" filename="reason_attachment_filename" />
+                       <field name="reason_attachment_filename" string="File Name" invisible="1" />
+                       <field name="cancel_type" invisible="1" />
+                    </group>
+                    <footer>
+                        <button name="cancel_invoice" string="Cancel Invoice" type="object"
+                            class="btn-primary" attrs="{'invisible':[('cancel_type','!=','invoice')]}"/>
+                        <button name="cancel_payment" string="Cancel Payment" type="object"
+                            class="btn-primary" attrs="{'invisible':[('cancel_type','!=','payment')]}"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+
+   <record id="account_cancel_reason_wizard_action" model="ir.actions.act_window">
+        <field name="name">Hãy nhập lý do</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">account.cancel.reason.wizard</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    
+
+    
+</odoo>

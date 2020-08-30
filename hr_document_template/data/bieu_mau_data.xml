@@ -1,0 +1,381 @@
+<odoo>
+    
+    <record id="Bc_bien_dong_nhan_su" model="document.template">
+        <field name="name">Bc biến động nhân sự</field>
+        <field name="file_name">BC BIẾN ĐỘNG NHÂN SỰ.xls</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/BC BIẾN ĐỘNG NHÂN SỰ.xls"/>
+    </record>
+
+    <record id="Bien_ban_ban_giao_cong_viec1" model="document.template">
+        <field name="name">Biên bản bàn giao công việc1</field>
+        <field name="file_name">BIÊN-BẢN-BÀN-GIAO-CÔNG-VIỆC1.docx</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/BIÊN-BẢN-BÀN-GIAO-CÔNG-VIỆC1.docx"/>
+    </record>
+
+    <record id="Bien_ban_ban_giao_ho_so_tai_lieu1" model="document.template">
+        <field name="name">Biên bản bàn giao hồ sơ tài liệu1</field>
+        <field name="file_name">BIÊN-BẢN-BÀN-GIAO-HỒ-SƠ-TÀI-LIỆU1.docx</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/BIÊN-BẢN-BÀN-GIAO-HỒ-SƠ-TÀI-LIỆU1.docx"/>
+    </record>
+
+    <record id="Bien_ban_ban_giao_tai_san1" model="document.template">
+        <field name="name">Biên bản bàn giao tài sản1</field>
+        <field name="file_name">BIÊN-BẢN-BÀN-GIAO-TÀI-SẢN1.docx</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/BIÊN-BẢN-BÀN-GIAO-TÀI-SẢN1.docx"/>
+    </record>
+
+    <record id="Bien_ban_hop_xu_ly_khieu_nai1" model="document.template">
+        <field name="name">Biên bản họp xử lý khiếu nại1</field>
+        <field name="file_name">BIÊN-BẢN-HỌP-XỬ-LÝ-KHIẾU-NẠI1.docx</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/BIÊN-BẢN-HỌP-XỬ-LÝ-KHIẾU-NẠI1.docx"/>
+    </record>
+
+    <record id="Bien_ban_thanh_hop_dong_lao_dong1" model="document.template">
+        <field name="name">Biên bản thanh hợp đồng lao động1</field>
+        <field name="file_name">BIÊN-BẢN-THANH-HỢP-ĐỒNG-LAO-ĐỘNG1.docx</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/BIÊN-BẢN-THANH-HỢP-ĐỒNG-LAO-ĐỘNG1.docx"/>
+    </record>
+
+    <record id="Bien_ban_vi_pham_ky_luat1" model="document.template">
+        <field name="name">Biên bản vi phạm kỷ luật1</field>
+        <field name="file_name">BIÊN-BẢN-VI-PHẠM-KỶ-LUẬT1.docx</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/BIÊN-BẢN-VI-PHẠM-KỶ-LUẬT1.docx"/>
+    </record>
+
+    <record id="Bien_ban_danh_gia_cong_viec1" model="document.template">
+        <field name="name">Biên bản đánh giá công việc1</field>
+        <field name="file_name">Biên-bản-đánh-giá-công-việc1.doc</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/Biên-bản-đánh-giá-công-việc1.doc"/>
+    </record>
+
+    <record id="Ban_cam_ket_nghi_viec1" model="document.template">
+        <field name="name">Bản cam kết nghỉ việc1</field>
+        <field name="file_name">BẢN-CAM-KẾT-NGHỈ-VIỆC1.docx</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/BẢN-CAM-KẾT-NGHỈ-VIỆC1.docx"/>
+    </record>
+
+    <record id="Ban_tu_kiem_ca_nhan1" model="document.template">
+        <field name="name">Bản tự kiểm cá nhân1</field>
+        <field name="file_name">BẢN-TỰ-KIỂM-CÁ-NHÂN1.docx</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/BẢN-TỰ-KIỂM-CÁ-NHÂN1.docx"/>
+    </record>
+
+    <record id="Bang_cham_cong_tang_ca1" model="document.template">
+        <field name="name">Bảng chấm công tăng ca1</field>
+        <field name="file_name">Bảng-chấm-công-tăng-ca1.doc</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/Bảng-chấm-công-tăng-ca1.doc"/>
+    </record>
+
+    <record id="Bang_ke_chi_tiet_tien_luong1" model="document.template">
+        <field name="name">Bảng kê chi tiết tiền lương1</field>
+        <field name="file_name">Bảng-kê-chi-tiết-tiền-lương1.doc</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/Bảng-kê-chi-tiết-tiền-lương1.doc"/>
+    </record>
+
+    <record id="Bang_luong1_(1)" model="document.template">
+        <field name="name">Bảng lương1 (1)</field>
+        <field name="file_name">BẢNG-LƯƠNG1 (1).xls</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/BẢNG-LƯƠNG1 (1).xls"/>
+    </record>
+
+    <record id="Bang_tieu_chuan_danh_gia_cong_viec1" model="document.template">
+        <field name="name">Bảng tiêu chuẩn đánh giá công việc1</field>
+        <field name="file_name">Bảng-tiêu-chuẩn-đánh-giá-công-việc1.doc</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/Bảng-tiêu-chuẩn-đánh-giá-công-việc1.doc"/>
+    </record>
+
+    <record id="Bang_tong_hop_diem_tru_nghiep_vu_noi_quy1" model="document.template">
+        <field name="name">Bảng tổng hợp điểm trừ nghiệp vụ nội quy1</field>
+        <field name="file_name">Bảng-tổng-hợp-điểm-trừ-nghiệp-vụ-nội-quy1.doc</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/Bảng-tổng-hợp-điểm-trừ-nghiệp-vụ-nội-quy1.doc"/>
+    </record>
+
+    <record id="Bang_tong_hop_danh_gia_chi_tieu1" model="document.template">
+        <field name="name">Bảng tổng hợp đánh giá chỉ tiêu1</field>
+        <field name="file_name">Bảng-tổng-hợp-đánh-giá-chỉ-tiêu1.doc</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/Bảng-tổng-hợp-đánh-giá-chỉ-tiêu1.doc"/>
+    </record>
+
+    <record id="Bang_tu_nhan_xet_cua_can_bo1" model="document.template">
+        <field name="name">Bảng tự nhận xét của cán bộ1</field>
+        <field name="file_name">Bảng-tự-nhận-xét-của-cán-bộ1.doc</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/Bảng-tự-nhận-xét-của-cán-bộ1.doc"/>
+    </record>
+
+    <record id="Danh_sach_nhan_vien_chua_duoc_tang_luong1" model="document.template">
+        <field name="name">Danh sách nhân viên chưa được tăng lương1</field>
+        <field name="file_name">Danh-sách-nhân-viên-chưa-được-tăng-lương1.doc</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/Danh-sách-nhân-viên-chưa-được-tăng-lương1.doc"/>
+    </record>
+
+    <record id="Danh_sach_tang_luong_dinh_ky1" model="document.template">
+        <field name="name">Danh sách tăng lương định kỳ1</field>
+        <field name="file_name">DANH-SÁCH-TĂNG-LƯƠNG-ĐỊNH-KỲ1.docx</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/DANH-SÁCH-TĂNG-LƯƠNG-ĐỊNH-KỲ1.docx"/>
+    </record>
+
+    <record id="Giay_bien_nhan_ho_so_khieu_nai1" model="document.template">
+        <field name="name">Giấy biên nhận hồ sơ khiếu nại1</field>
+        <field name="file_name">GIẤY-BIÊN-NHẬN-HỒ-SƠ-KHIẾU-NẠI1.docx</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/GIẤY-BIÊN-NHẬN-HỒ-SƠ-KHIẾU-NẠI1.docx"/>
+    </record>
+
+    <record id="Giay_de_nghi_tang_luong1" model="document.template">
+        <field name="name">Giấy đề nghị tăng lương1</field>
+        <field name="file_name">GIẤY-ĐỀ-NGHỊ-TĂNG-LƯƠNG1.docx</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/GIẤY-ĐỀ-NGHỊ-TĂNG-LƯƠNG1.docx"/>
+    </record>
+
+    <record id="Hc___12___bm01_giay_de_nghi_di_cong_tac" model="document.template">
+        <field name="name">Hc   12   bm01 giay de nghi di cong tac</field>
+        <field name="file_name">HC - 12 - BM01 Giay de nghi di cong tac.doc</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/HC - 12 - BM01 Giay de nghi di cong tac.doc"/>
+    </record>
+
+    <record id="Hc___12___bm02_giay_gioi_thieu" model="document.template">
+        <field name="name">Hc   12   bm02 giay gioi thieu</field>
+        <field name="file_name">HC - 12 - BM02 Giay gioi thieu.doc</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/HC - 12 - BM02 Giay gioi thieu.doc"/>
+    </record>
+
+    <record id="Hc___12___bm03_ke_hoach_di_cong_tac" model="document.template">
+        <field name="name">Hc   12   bm03 ke hoach di cong tac</field>
+        <field name="file_name">HC - 12 - BM03 Ke hoach di cong tac.doc</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/HC - 12 - BM03 Ke hoach di cong tac.doc"/>
+    </record>
+
+    <record id="Hc___12___bm04_bang_xac_nhan_cong_tac" model="document.template">
+        <field name="name">Hc   12   bm04 bang xac nhan cong tac</field>
+        <field name="file_name">HC - 12 - BM04 Bang xac nhan cong tac.doc</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/HC - 12 - BM04 Bang xac nhan cong tac.doc"/>
+    </record>
+
+    <record id="Hc___12___bm05_bao_cao_ket_qua_cong_tac" model="document.template">
+        <field name="name">Hc   12   bm05 bao cao ket qua cong tac</field>
+        <field name="file_name">HC - 12 - BM05 Bao cao ket qua cong tac.doc</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/HC - 12 - BM05 Bao cao ket qua cong tac.doc"/>
+    </record>
+
+    <record id="Hc___12___bm06_bang_thanh_toan_tien_cong_tac_phi" model="document.template">
+        <field name="name">Hc   12   bm06 bang thanh toan tien cong tac phi</field>
+        <field name="file_name">HC - 12 - BM06 Bang thanh toan tien cong tac phi.doc</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/HC - 12 - BM06 Bang thanh toan tien cong tac phi.doc"/>
+    </record>
+
+    <record id="Hc___12___bm07_bang_ke_phu_cap_luu_tru_o_nuoc_ngoai" model="document.template">
+        <field name="name">Hc   12   bm07 bang ke phu cap luu tru o nuoc ngoai</field>
+        <field name="file_name">HC - 12 - BM07 Bang ke phu cap luu tru o nuoc ngoai.doc</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/HC - 12 - BM07 Bang ke phu cap luu tru o nuoc ngoai.doc"/>
+    </record>
+
+    <record id="Hc___12___bm08__to_trinh_cong_tac_phi_vuot_khung_hang" model="document.template">
+        <field name="name">Hc   12   bm08  to trinh cong tac phi vuot khung hang</field>
+        <field name="file_name">HC - 12 - BM08  To trinh cong tac phi vuot khung hang.doc</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/HC - 12 - BM08  To trinh cong tac phi vuot khung hang.doc"/>
+    </record>
+
+    <record id="Hc___12___quy_dinh_che_do_cong_tac,_cong_tac_phi" model="document.template">
+        <field name="name">Hc   12   quy dinh che do cong tac, cong tac phi</field>
+        <field name="file_name">HC - 12 - Quy dinh che do cong tac, cong tac phi.doc</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/HC - 12 - Quy dinh che do cong tac, cong tac phi.doc"/>
+    </record>
+
+    <record id="Mau_bao_cao1" model="document.template">
+        <field name="name">Mẫu báo cáo1</field>
+        <field name="file_name">MẪU-BÁO-CÁO1.docx</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/MẪU-BÁO-CÁO1.docx"/>
+    </record>
+
+    <record id="Mau_bang_he_so_tien_luong_chuc_danh1" model="document.template">
+        <field name="name">Mẫu bảng hệ số tiền lương chức danh1</field>
+        <field name="file_name">Mẫu-bảng-hệ-số-tiền-lương-chức-danh1.doc</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/Mẫu-bảng-hệ-số-tiền-lương-chức-danh1.doc"/>
+    </record>
+
+    <record id="Mau_cong_van_dang_ky_thang_luong1" model="document.template">
+        <field name="name">Mẫu công văn đăng ký thang lương1</field>
+        <field name="file_name">Mẫu-công-văn-đăng-ký-thang-lương1.doc</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/Mẫu-công-văn-đăng-ký-thang-lương1.doc"/>
+    </record>
+
+    <record id="Mau_giay_chung_nhan_suc_khoe1" model="document.template">
+        <field name="name">Mẫu giấy chứng nhận sức khỏe1</field>
+        <field name="file_name">Mẫu-giấy-chứng-nhận-sức-khỏe1.doc</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/Mẫu-giấy-chứng-nhận-sức-khỏe1.doc"/>
+    </record>
+
+    <record id="Mau_so_yeu_li_lich1" model="document.template">
+        <field name="name">Mẫu sơ yếu lí lịch1</field>
+        <field name="file_name">Mẫu-sơ-yếu-lí-lịch1.doc</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/Mẫu-sơ-yếu-lí-lịch1.doc"/>
+    </record>
+
+    <record id="Mau_don_xin_nghi_huong_tro_cap_mot_lan1" model="document.template">
+        <field name="name">Mẫu đơn xin nghỉ hưởng trợ cấp một lần1</field>
+        <field name="file_name">Mẫu-đơn-xin-nghỉ-hưởng-trợ-cấp-một-lần1.doc</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/Mẫu-đơn-xin-nghỉ-hưởng-trợ-cấp-một-lần1.doc"/>
+    </record>
+
+    <record id="Mau_don_xin_thuyen_chuyen_cong_tac1" model="document.template">
+        <field name="name">Mẫu đơn xin thuyên chuyên công tác1</field>
+        <field name="file_name">Mẫu-đơn-xin-thuyên-chuyên-công-tác1.doc</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/Mẫu-đơn-xin-thuyên-chuyên-công-tác1.doc"/>
+    </record>
+
+    <record id="Nhan_vien_nhan_su" model="document.template">
+        <field name="name">Nhân viên nhân sự</field>
+        <field name="file_name">Nhân viên nhân sự.docx</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/Nhân viên nhân sự.docx"/>
+    </record>
+
+    <record id="Noi_qui_cong_ty1" model="document.template">
+        <field name="name">Nội qui công ty1</field>
+        <field name="file_name">Nội-qui-công-ty1.docx</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/Nội-qui-công-ty1.docx"/>
+    </record>
+
+    <record id="Phieu_bo_nhiem_can_bo1" model="document.template">
+        <field name="name">Phiếu bổ nhiệm cán bộ1</field>
+        <field name="file_name">Phiếu-bổ-nhiệm-cán-bộ1.doc</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/Phiếu-bổ-nhiệm-cán-bộ1.doc"/>
+    </record>
+
+    <record id="Phieu_danh_gia_can_bo1" model="document.template">
+        <field name="name">Phiếu đánh giá cán bộ1</field>
+        <field name="file_name">Phiếu-đánh-giá-cán-bộ1.doc</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/Phiếu-đánh-giá-cán-bộ1.doc"/>
+    </record>
+
+    <record id="Phieu_de_xuat_thang_chuc1" model="document.template">
+        <field name="name">Phiếu đề xuất thăng chức1</field>
+        <field name="file_name">Phiếu-đề-xuất-thăng-chức1.doc</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/Phiếu-đề-xuất-thăng-chức1.doc"/>
+    </record>
+
+    <record id="Quy_che_bo_nhiem1" model="document.template">
+        <field name="name">Quy chế bổ nhiệm1</field>
+        <field name="file_name">Quy-chế-bổ-nhiệm1.doc</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/Quy-chế-bổ-nhiệm1.doc"/>
+    </record>
+
+    <record id="Quy_che_khen_thuong1" model="document.template">
+        <field name="name">Quy chế khen thương1</field>
+        <field name="file_name">QUY-CHẾ-KHEN-THƯƠNG1.docx</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/QUY-CHẾ-KHEN-THƯƠNG1.docx"/>
+    </record>
+
+    <record id="Quy_che_ky_luat1" model="document.template">
+        <field name="name">Quy chế kỷ luật1</field>
+        <field name="file_name">QUY-CHẾ-KỶ-LUẬT1.docx</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/QUY-CHẾ-KỶ-LUẬT1.docx"/>
+    </record>
+
+    <record id="Quy_che_luong1" model="document.template">
+        <field name="name">Quy chế lương1</field>
+        <field name="file_name">QUY-CHẾ-LƯƠNG1.docx</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/QUY-CHẾ-LƯƠNG1.docx"/>
+    </record>
+
+    <record id="Quy_trinh_hoach_dinh_nhan_su1" model="document.template">
+        <field name="name">Quy trình hoạch định nhân sự1</field>
+        <field name="file_name">QUY-TRÌNH-HOẠCH-ĐỊNH-NHÂN-SỰ1.docx</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/QUY-TRÌNH-HOẠCH-ĐỊNH-NHÂN-SỰ1.docx"/>
+    </record>
+
+    <record id="Quy_trinh_nghi_phep1" model="document.template">
+        <field name="name">Quy trình nghỉ phép1</field>
+        <field name="file_name">QUY-TRÌNH-NGHỈ-PHÉP1.docx</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/QUY-TRÌNH-NGHỈ-PHÉP1.docx"/>
+    </record>
+
+    <record id="Quy_trinh_nghi_viec1" model="document.template">
+        <field name="name">Quy trình nghỉ việc1</field>
+        <field name="file_name">QUY-TRÌNH-NGHỈ-VIỆC1.docx</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/QUY-TRÌNH-NGHỈ-VIỆC1.docx"/>
+    </record>
+
+    <record id="Quy_trinh_tinh_luong1" model="document.template">
+        <field name="name">Quy trình tính lương1</field>
+        <field name="file_name">QUY-TRÌNH-TÍNH-LƯƠNG1.docx</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/QUY-TRÌNH-TÍNH-LƯƠNG1.docx"/>
+    </record>
+
+    <record id="Quy_trinh_xu_ly_khieu_nai_to_cao1" model="document.template">
+        <field name="name">Quy trình xử lý khiếu nại tố cáo1</field>
+        <field name="file_name">QUY-TRÌNH-XỬ-LÝ-KHIẾU-NẠI-TỐ-CÁO1.docx</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/QUY-TRÌNH-XỬ-LÝ-KHIẾU-NẠI-TỐ-CÁO1.docx"/>
+    </record>
+
+    <record id="Quyet_dinh_bo_nhiem1" model="document.template">
+        <field name="name">Quyết định bổ nhiệm1</field>
+        <field name="file_name">Quyết-định-bổ-nhiệm1.doc</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/Quyết-định-bổ-nhiệm1.doc"/>
+    </record>
+
+    <record id="Quyet_dinh_cho_thoi_viec1" model="document.template">
+        <field name="name">Quyết định cho thôi việc1</field>
+        <field name="file_name">QUYẾT-ĐỊNH-CHO-THÔI-VIỆC1.docx</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/QUYẾT-ĐỊNH-CHO-THÔI-VIỆC1.docx"/>
+    </record>
+
+    <record id="Quyet_dinh_tang_luong1" model="document.template">
+        <field name="name">Quyết định tăng lương1</field>
+        <field name="file_name">QUYẾT-ĐỊNH-TĂNG-LƯƠNG1.docx</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/QUYẾT-ĐỊNH-TĂNG-LƯƠNG1.docx"/>
+    </record>
+
+    <record id="Quyet_dinh_xoa_bo_an_ky_luat1" model="document.template">
+        <field name="name">Quyết định xóa bỏ án kỷ luật1</field>
+        <field name="file_name">Quyết-định-xóa-bỏ-án-kỷ-luật1.doc</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/Quyết-định-xóa-bỏ-án-kỷ-luật1.doc"/>
+    </record>
+
+    <record id="Quyet_dinh_xu_ly_khieu_nai_to_cao" model="document.template">
+        <field name="name">Quyết định xử lý khiếu nại tố cáo</field>
+        <field name="file_name">QUYẾT-ĐỊNH-XỬ-LÝ-KHIẾU-NẠI-TỐ-CÁO.docx</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/QUYẾT-ĐỊNH-XỬ-LÝ-KHIẾU-NẠI-TỐ-CÁO.docx"/>
+    </record>
+
+    <record id="Quyet_dinh_xu_ly_ky_luat1" model="document.template">
+        <field name="name">Quyết định xử lý kỷ luật1</field>
+        <field name="file_name">QUYẾT-ĐỊNH-XỬ-LÝ-KỶ-LUẬT1.docx</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/QUYẾT-ĐỊNH-XỬ-LÝ-KỶ-LUẬT1.docx"/>
+    </record>
+
+    <record id="So_theo_doi_khen_thuong1" model="document.template">
+        <field name="name">Sổ theo dõi khen thưởng1</field>
+        <field name="file_name">SỔ-THEO-DÕI-KHEN-THƯỞNG1.docx</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/SỔ-THEO-DÕI-KHEN-THƯỞNG1.docx"/>
+    </record>
+
+    <record id="So_theo_doi_khieu_nai1" model="document.template">
+        <field name="name">Sổ theo dõi khiếu nại1</field>
+        <field name="file_name">SỔ-THEO-DÕI-KHIẾU-NẠI1.docx</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/SỔ-THEO-DÕI-KHIẾU-NẠI1.docx"/>
+    </record>
+
+    <record id="So_theo_doi_ky_luat1" model="document.template">
+        <field name="name">Sổ theo dõi kỷ luật1</field>
+        <field name="file_name">SỔ-THEO-DÕI-KỶ-LUẬT1.docx</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/SỔ-THEO-DÕI-KỶ-LUẬT1.docx"/>
+    </record>
+
+    <record id="So_theo_doi_nghi_phep1" model="document.template">
+        <field name="name">Sổ theo dõi nghỉ phép1</field>
+        <field name="file_name">SỔ-THEO-DÕI-NGHỈ-PHÉP1.docx</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/SỔ-THEO-DÕI-NGHỈ-PHÉP1.docx"/>
+    </record>
+
+    <record id="Don_khieu_nai_to_cao1" model="document.template">
+        <field name="name">Đơn khiếu nại tố cáo1</field>
+        <field name="file_name">ĐƠN-KHIẾU-NẠI-TỐ-CÁO1.docx</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/ĐƠN-KHIẾU-NẠI-TỐ-CÁO1.docx"/>
+    </record>
+
+    <record id="Don_xin_nghi_viec1" model="document.template">
+        <field name="name">Đơn xin nghỉ việc1</field>
+        <field name="file_name">ĐƠN-XIN-NGHỈ-VIỆC1.docx</field>
+        <field name="data" type="base64" file="hr_document_template/static/CAC BIEU MAU HANH CHINH/ĐƠN-XIN-NGHỈ-VIỆC1.docx"/>
+    </record>
+
+</odoo>

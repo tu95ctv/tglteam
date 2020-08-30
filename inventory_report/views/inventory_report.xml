@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="inventory_report_view_form" model="ir.ui.view">
+        <field name="name">vio.inventory.report.form</field>
+        <field name="model">vio.inventory.report</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_get_data_inventory_report_line" string="Tính giá trị" type="object" class="btn-primary"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" invisible="1"/>
+                            <field name="range_id" options="{'no_create': True}"/>
+                            <field name="date_from" />
+                            <field name="date_to" />
+                        </group>
+                        <group>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                            <field name="warehouse_id" options="{'no_create': True}"/>
+                            <field name="type_get_value" />
+                            <field name="value" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Chi tiết xuất nhập tồn">
+                            <field name="inventory_report_line_ids" readonly="1" />
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="inventory_report_view_tree" model="ir.ui.view">
+        <field name="name">vio.inventory.report.tree</field>
+        <field name="model">vio.inventory.report</field>
+        <field name="arch" type="xml">
+            <tree string="Inventory report">
+                <field name="range_id" />
+                <field name="date_from" />
+                <field name="date_to" />
+                <field name="warehouse_id" />
+                <field name="type_get_value" />
+                <field name="value" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_inventory_report_view" model="ir.actions.act_window">
+        <field name="name">Báo các xuất nhập tồn</field>
+        <field name="res_model">vio.inventory.report</field>
+        <field name="view_mode">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="inventory_report_view_tree"/>
+        <!-- <field name="target">new</field> -->
+    </record>
+
+
+    <record id="inventory_report_line_view_tree" model="ir.ui.view">
+        <field name="name">vio.inventory.report.tree</field>
+        <field name="model">vio.inventory.report.line</field>
+        <field name="arch" type="xml">
+            <tree string="Inventory report line">
+                <field name="product_id" />
+                <field name="uom_id" />
+                <field name="stock_opening" string="Số lượng" attrs="{'merge_group1': 'Đầu kỳ'}" sum="Tổng"/>
+                <field name="stock_value_opening" string="Giá trị" attrs="{'merge_group1': 'Đầu kỳ'}" sum="Tổng"/>
+                <field name="stock_in" string="Số lượng" attrs="{'merge_group1': 'Nhập trong kỳ'}" sum="Tổng"/>
+                <field name="stock_value_in" string="Giá trị" attrs="{'merge_group1': 'Nhập trong kỳ'}" sum="Tổng"/>
+                <field name="stock_out" string="Số lượng" attrs="{'merge_group1': 'Xuất trong kỳ'}" sum="Tổng"/>
+                <field name="stock_value_out" string="Giá trị" attrs="{'merge_group1': 'Xuất trong kỳ'}" sum="Tổng"/>
+                <field name="stock_closing" string="Số lượng" attrs="{'merge_group1': 'Cuối kỳ'}" sum="Tổng"/>
+                <field name="stock_value_closing" string="Giá trị" attrs="{'merge_group1': 'Cuối kỳ'}" sum="Tổng"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_inventory_report_line_view" model="ir.actions.act_window">
+        <field name="name">Chi tiết xuất nhập tồn</field>
+        <field name="res_model">vio.inventory.report.line</field>
+        <field name="view_mode">form</field>
+    </record>
+
+        <record id="action_inventory_report" model="ir.actions.server">
+            <field name="name">Xuất nhập tồn</field>
+            <field name="model_id" ref="model_vio_inventory_report"/>
+            <field name="state">code</field>
+            <field name="code">
+action_values = env.ref('inventory_report.action_inventory_report_view').read()[0]
+res_id = env['vio.inventory.report'].search([('user_id','=',env.user.id)], limit=1)
+if not res_id:
+    res_id = env['vio.inventory.report'].create({'user_id': env.user.id})
+res_id.action_get_data_inventory_report_line()
+action_values.update({'res_id': res_id.id})
+action = action_values
+            </field>
+        </record>
+
+    <menuitem id="menu_inventory_report_new" name="Xuất nhập tồn" parent="stock.menu_warehouse_report" sequence="150" action="action_inventory_report"/>
+    
+    <!-- <menuitem id="menu_inventory_report_new_10" name="Tổng hợp xuất nhập tồn" parent="inventory_report.menu_inventory_report_new" sequence="10" action="action_inventory_report_view"/> -->
+
+    <!-- <menuitem id="menu_inventory_report_new_20" name="Chi tiết xuất nhập tồn" parent="inventory_report.menu_inventory_report_new" sequence="20" action="action_inventory_report_line_view"/> -->
+</odoo>

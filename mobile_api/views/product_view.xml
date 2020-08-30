@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="product_template_form_view">
+        <field name="name">product.template.common.form.inherit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='general_information']" position="after">
+                <page name="mobile_app" string="Mobile App">
+                    <group>
+                        <field name="published_on_app"/>
+                        <field name="ecommerce_mobile_app_categ_ids" widget="many2many_tags" options="{'no_create': 1}"/>
+                        <field name="image_url" widget="url"/>
+                    </group>
+                    <separator string="Images"/>
+                    <field name="image_ids"/>
+                    <notebook>
+                        <page string="Detail description">
+                            <field name="mobile_detail_description"/>
+                        </page>
+                        <page string="Summury description">
+                            <field name="mobile_summury_description"/>
+                        </page>
+                        <page string="Technical description">
+                            <field name="mobile_technical_description"/>
+                        </page>
+                    </notebook>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    
+    <record model="ir.ui.view" id="view_roduct_template_image_tree">
+        <field name="name">product.template.image.tree</field>
+        <field name="model">product.template.image</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="sequence" widget="handle"/>
+                <field name="image" widget="image" class="oe_avatar" width="100" height="100"/>
+                <field name="product_id" invisible="not context.get('show_product')" options="{'no_create': 1}"/>
+                <field name="image_url" widget="url"/>
+                <field name="note"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="product_image_search" model="ir.ui.view">
+        <field name="name">product.template.image.search</field>
+        <field name="model">product.template.image</field>
+        <field name="arch" type="xml">
+            <search string="Product images">
+                <field name="product_id"/>
+                <separator/>
+                <filter name="no_image" string="No image" domain="[('image_url', '=', False)]"/>
+                <group expand="0" string="Group By">
+                    <filter name="group_product" string="Product" domain="[]" context="{'group_by' : 'product_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+   <record id="action_product_image" model="ir.actions.act_window">
+       <field name="name">Product Images</field>
+       <field name="res_model">product.template.image</field>
+       <field name="view_mode">tree</field>
+       <field name="context">{'show_product': 1}</field>
+   </record>
+
+
+   <!-- Product Brand -->
+   <record id="view_product_brand_form" model="ir.ui.view">
+        <field name="name">product.brand.form</field>
+        <field name="model">product.brand</field>
+        <field name="inherit_id" ref="product_brand.view_product_brand_form"/>
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="image_url"/>
+            </field>
+        </field>
+    </record>
+   <!-- END: Product Brand -->
+
+</odoo>

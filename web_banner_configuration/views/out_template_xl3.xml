@@ -1,0 +1,1218 @@
+<odoo>
+        <template id="tb_01_Minimal_Statistics_Cards__New_Posts" name="tb_01_Minimal_Statistics_Cards__New_Posts">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex">
+                        <div class="align-self-center">
+                            <i class="icon-pencil primary font-large-2 float-left"></i>
+                        </div>
+                        <tr t-as="line" t-foreach="config.line_ids">
+                            <div class="media-body text-right">
+                                <h3 t-esc="line.value_char"></h3>
+                                <span t-esc="line.name"></span>
+                            </div>
+                        </tr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_01_Minimal_Statistics_Cards__New_Posts" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_02_Minimal_Statistics_Cards__New_Comments" name="tb_02_Minimal_Statistics_Cards__New_Comments">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex">
+                        <div class="align-self-center">
+                            <i class="icon-speech warning font-large-2 float-left"></i>
+                        </div>
+                        <tr t-as="line" t-foreach="config.line_ids">
+                            <div class="media-body text-right">
+                                <h3 t-esc="line.value_char"></h3>
+                                <span t-esc="line.name"></span>
+                            </div>
+                        </tr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_02_Minimal_Statistics_Cards__New_Comments" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_03_Minimal_Statistics_Cards__Bounce_Rate" name="tb_03_Minimal_Statistics_Cards__Bounce_Rate">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex">
+                        <div class="align-self-center">
+                            <i class="icon-graph success font-large-2 float-left"></i>
+                        </div>
+                        <tr t-as="line" t-foreach="config.line_ids">
+                            <div class="media-body text-right">
+                                <h3 t-esc="line.value_char"></h3>
+                                <span t-esc="line.name"></span>
+                            </div>
+                        </tr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_03_Minimal_Statistics_Cards__Bounce_Rate" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_04_Minimal_Statistics_Cards__Total_Visits" name="tb_04_Minimal_Statistics_Cards__Total_Visits">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex">
+                        <div class="align-self-center">
+                            <i class="icon-plane danger font-large-2 float-left"></i>
+                        </div>
+                        <tr t-as="line" t-foreach="config.line_ids">
+                            <div class="media-body text-right">
+                                <h3 t-esc="line.value_char"></h3>
+                                <span t-esc="line.name"></span>
+                            </div>
+                        </tr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_04_Minimal_Statistics_Cards__Total_Visits" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_05_Minimal_Statistics_Cards__New_Projects" name="tb_05_Minimal_Statistics_Cards__New_Projects">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex">
+                        <tr t-as="line" t-foreach="config.line_ids">
+                            <div class="media-body text-left">
+                                <h3 t-esc="line.value_char"></h3>
+                                <span t-esc="line.name"></span>
+                            </div>
+                        </tr>
+                        <div class="align-self-center">
+                            <i class="icon-rocket danger font-large-2 float-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_05_Minimal_Statistics_Cards__New_Projects" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_06_Minimal_Statistics_Cards__New_Clients" name="tb_06_Minimal_Statistics_Cards__New_Clients">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex">
+                        <tr t-as="line" t-foreach="config.line_ids">
+                            <div class="media-body text-left">
+                                <h3 t-esc="line.value_char"></h3>
+                                <span t-esc="line.name"></span>
+                            </div>
+                        </tr>
+                        <div class="align-self-center">
+                            <i class="icon-user success font-large-2 float-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_06_Minimal_Statistics_Cards__New_Clients" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_07_Minimal_Statistics_Cards__Conversion_Rate" name="tb_07_Minimal_Statistics_Cards__Conversion_Rate">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex">
+                        <tr t-as="line" t-foreach="config.line_ids">
+                            <div class="media-body text-left">
+                                <h3 t-esc="line.value_char"></h3>
+                                <span t-esc="line.name"></span>
+                            </div>
+                        </tr>
+                        <div class="align-self-center">
+                            <i class="icon-pie-chart warning font-large-2 float-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_07_Minimal_Statistics_Cards__Conversion_Rate" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_08_Minimal_Statistics_Cards__Support_Tickets" name="tb_08_Minimal_Statistics_Cards__Support_Tickets">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex">
+                        <tr t-as="line" t-foreach="config.line_ids">
+                            <div class="media-body text-left">
+                                <h3 t-esc="line.value_char"></h3>
+                                <span t-esc="line.name"></span>
+                            </div>
+                        </tr>
+                        <div class="align-self-center">
+                            <i class="icon-support primary font-large-2 float-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_08_Minimal_Statistics_Cards__Support_Tickets" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_09_Minimal_Statistics_Cards__New_Posts" name="tb_09_Minimal_Statistics_Cards__New_Posts">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex">
+                        <tr t-as="line" t-foreach="config.line_ids">
+                            <div class="media-body text-left">
+                                <h3 t-esc="line.value_char"></h3>
+                                <span t-esc="line.name"></span>
+                            </div>
+                        </tr>
+                        <div class="align-self-center">
+                            <i class="icon-book-open primary font-large-2 float-right"></i>
+                        </div>
+                    </div>
+                    <div class="progress mt-3 mb-0" style="height: 7px;">
+                        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="80" class="progress-bar bg-primary" role="progressbar" style="width: 80%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_09_Minimal_Statistics_Cards__New_Posts" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_10_Minimal_Statistics_Cards__New_Comments" name="tb_10_Minimal_Statistics_Cards__New_Comments">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex">
+                        <tr t-as="line" t-foreach="config.line_ids">
+                            <div class="media-body text-left">
+                                <h3 t-esc="line.value_char"></h3>
+                                <span t-esc="line.name"></span>
+                            </div>
+                        </tr>
+                        <div class="align-self-center">
+                            <i class="icon-bubbles warning font-large-2 float-right"></i>
+                        </div>
+                    </div>
+                    <div class="progress mt-3 mb-0" style="height: 7px;">
+                        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="80" class="progress-bar bg-warning" role="progressbar" style="width: 10%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_10_Minimal_Statistics_Cards__New_Comments" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_11_Minimal_Statistics_Cards__Bounce_Rate" name="tb_11_Minimal_Statistics_Cards__Bounce_Rate">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex">
+                        <tr t-as="line" t-foreach="config.line_ids">
+                            <div class="media-body text-left">
+                                <h3 t-esc="line.value_char"></h3>
+                                <span t-esc="line.name"></span>
+                            </div>
+                        </tr>
+                        <div class="align-self-center">
+                            <i class="icon-cup success font-large-2 float-right"></i>
+                        </div>
+                    </div>
+                    <div class="progress mt-3 mb-0" style="height: 7px;">
+                        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="65" class="progress-bar bg-success" role="progressbar" style="width: 65%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_11_Minimal_Statistics_Cards__Bounce_Rate" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_12_Minimal_Statistics_Cards__Total_Visits" name="tb_12_Minimal_Statistics_Cards__Total_Visits">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex">
+                        <tr t-as="line" t-foreach="config.line_ids">
+                            <div class="media-body text-left">
+                                <h3 t-esc="line.value_char"></h3>
+                                <span t-esc="line.name"></span>
+                            </div>
+                        </tr>
+                        <div class="align-self-center">
+                            <i class="icon-direction danger font-large-2 float-right"></i>
+                        </div>
+                    </div>
+                    <div class="progress mt-3 mb-0" style="height: 7px;">
+                        <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="80" class="progress-bar bg-danger" role="progressbar" style="width: 20%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_12_Minimal_Statistics_Cards__Total_Visits" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_13_Minimal_Statistics_With_Background_Color__New_Posts" name="tb_13_Minimal_Statistics_With_Background_Color__New_Posts">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card bg-primary">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex">
+                        <div class="align-self-center">
+                            <i class="icon-pencil white font-large-2 float-left"></i>
+                        </div>
+                        <tr t-as="line" t-foreach="config.line_ids">
+                            <div class="media-body white text-right">
+                                <h3 t-esc="line.value_char"></h3>
+                                <span t-esc="line.name"></span>
+                            </div>
+                        </tr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_13_Minimal_Statistics_With_Background_Color__New_Posts" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_14_Minimal_Statistics_With_Background_Color__New_Comments" name="tb_14_Minimal_Statistics_With_Background_Color__New_Comments">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card bg-danger">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex">
+                        <div class="align-self-center">
+                            <i class="icon-speech white font-large-2 float-left"></i>
+                        </div>
+                        <tr t-as="line" t-foreach="config.line_ids">
+                            <div class="media-body white text-right">
+                                <h3 t-esc="line.value_char"></h3>
+                                <span t-esc="line.name"></span>
+                            </div>
+                        </tr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_14_Minimal_Statistics_With_Background_Color__New_Comments" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_15_Minimal_Statistics_With_Background_Color__Bounce_Rate" name="tb_15_Minimal_Statistics_With_Background_Color__Bounce_Rate">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card bg-success">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex">
+                        <div class="align-self-center">
+                            <i class="icon-graph white font-large-2 float-left"></i>
+                        </div>
+                        <tr t-as="line" t-foreach="config.line_ids">
+                            <div class="media-body white text-right">
+                                <h3 t-esc="line.value_char"></h3>
+                                <span t-esc="line.name"></span>
+                            </div>
+                        </tr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_15_Minimal_Statistics_With_Background_Color__Bounce_Rate" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_16_Minimal_Statistics_With_Background_Color__Total_Visits" name="tb_16_Minimal_Statistics_With_Background_Color__Total_Visits">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card bg-warning">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex">
+                        <div class="align-self-center">
+                            <i class="icon-plane white font-large-2 float-left"></i>
+                        </div>
+                        <tr t-as="line" t-foreach="config.line_ids">
+                            <div class="media-body white text-right">
+                                <h3 t-esc="line.value_char"></h3>
+                                <span t-esc="line.name"></span>
+                            </div>
+                        </tr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_16_Minimal_Statistics_With_Background_Color__Total_Visits" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_17_Minimal_Statistics_With_Background_Color__New_Projects" name="tb_17_Minimal_Statistics_With_Background_Color__New_Projects">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card bg-warning">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex">
+                        <tr t-as="line" t-foreach="config.line_ids">
+                            <div class="media-body white text-left">
+                                <h3 t-esc="line.value_char"></h3>
+                                <span t-esc="line.name"></span>
+                            </div>
+                        </tr>
+                        <div class="align-self-center">
+                            <i class="icon-rocket white font-large-2 float-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_17_Minimal_Statistics_With_Background_Color__New_Projects" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_18_Minimal_Statistics_With_Background_Color__New_Clients" name="tb_18_Minimal_Statistics_With_Background_Color__New_Clients">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card bg-success">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex">
+                        <tr t-as="line" t-foreach="config.line_ids">
+                            <div class="media-body white text-left">
+                                <h3 t-esc="line.value_char"></h3>
+                                <span t-esc="line.name"></span>
+                            </div>
+                        </tr>
+                        <div class="align-self-center">
+                            <i class="icon-user white font-large-2 float-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_18_Minimal_Statistics_With_Background_Color__New_Clients" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_19_Minimal_Statistics_With_Background_Color__Conversion_Rate" name="tb_19_Minimal_Statistics_With_Background_Color__Conversion_Rate">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card bg-danger">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex">
+                        <tr t-as="line" t-foreach="config.line_ids">
+                            <div class="media-body white text-left">
+                                <h3 t-esc="line.value_char"></h3>
+                                <span t-esc="line.name"></span>
+                            </div>
+                        </tr>
+                        <div class="align-self-center">
+                            <i class="icon-pie-chart white font-large-2 float-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_19_Minimal_Statistics_With_Background_Color__Conversion_Rate" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_20_Minimal_Statistics_With_Background_Color__Support_Tickets" name="tb_20_Minimal_Statistics_With_Background_Color__Support_Tickets">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card bg-primary">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex">
+                        <tr t-as="line" t-foreach="config.line_ids">
+                            <div class="media-body white text-left">
+                                <h3 t-esc="line.value_char"></h3>
+                                <span t-esc="line.name"></span>
+                            </div>
+                        </tr>
+                        <div class="align-self-center">
+                            <i class="icon-support white font-large-2 float-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_20_Minimal_Statistics_With_Background_Color__Support_Tickets" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_21_Minimal_Statistics_With_Gradient_Background_Color__New_Posts" name="tb_21_Minimal_Statistics_With_Gradient_Background_Color__New_Posts">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card bg-gradient-directional-primary">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex">
+                        <div class="align-self-center">
+                            <i class="icon-pencil white font-large-2 float-left"></i>
+                        </div>
+                        <tr t-as="line" t-foreach="config.line_ids">
+                            <div class="media-body white text-right">
+                                <h3 t-esc="line.value_char"></h3>
+                                <span t-esc="line.name"></span>
+                            </div>
+                        </tr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_21_Minimal_Statistics_With_Gradient_Background_Color__New_Posts" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_22_Minimal_Statistics_With_Gradient_Background_Color__New_Comments" name="tb_22_Minimal_Statistics_With_Gradient_Background_Color__New_Comments">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card bg-gradient-directional-danger">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex">
+                        <div class="align-self-center">
+                            <i class="icon-speech white font-large-2 float-left"></i>
+                        </div>
+                        <tr t-as="line" t-foreach="config.line_ids">
+                            <div class="media-body white text-right">
+                                <h3 t-esc="line.value_char"></h3>
+                                <span t-esc="line.name"></span>
+                            </div>
+                        </tr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_22_Minimal_Statistics_With_Gradient_Background_Color__New_Comments" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_23_Minimal_Statistics_With_Gradient_Background_Color__Bounce_Rate" name="tb_23_Minimal_Statistics_With_Gradient_Background_Color__Bounce_Rate">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card bg-gradient-directional-success">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex">
+                        <div class="align-self-center">
+                            <i class="icon-graph white font-large-2 float-left"></i>
+                        </div>
+                        <tr t-as="line" t-foreach="config.line_ids">
+                            <div class="media-body white text-right">
+                                <h3 t-esc="line.value_char"></h3>
+                                <span t-esc="line.name"></span>
+                            </div>
+                        </tr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_23_Minimal_Statistics_With_Gradient_Background_Color__Bounce_Rate" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_24_Minimal_Statistics_With_Gradient_Background_Color__Total_Visits" name="tb_24_Minimal_Statistics_With_Gradient_Background_Color__Total_Visits">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card bg-gradient-directional-warning">
+            <div class="card-content">
+                <div class="card-body">
+                    <div class="media d-flex">
+                        <div class="align-self-center">
+                            <i class="icon-plane white font-large-2 float-left"></i>
+                        </div>
+                        <tr t-as="line" t-foreach="config.line_ids">
+                            <div class="media-body white text-right">
+                                <h3 t-esc="line.value_char"></h3>
+                                <span t-esc="line.name"></span>
+                            </div>
+                        </tr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_24_Minimal_Statistics_With_Gradient_Background_Color__Total_Visits" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_25_Icon_Section__Products" name="tb_25_Icon_Section__Products">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="media align-items-stretch">
+                    <div class="p-4 text-center bg-primary">
+                        <i class="icon-camera font-large-2 white"></i>
+                    </div>
+                    <tr t-as="line" t-foreach="config.line_ids">
+                        <div class="p-4 media-body">
+                            <h5 t-esc="line.name"></h5>
+                            <h5 t-esc="line.value_char"></h5>
+                        </div>
+                    </tr>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_25_Icon_Section__Products" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_26_Icon_Section__New_Users" name="tb_26_Icon_Section__New_Users">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="media align-items-stretch">
+                    <div class="p-4 text-center bg-danger">
+                        <i class="icon-user font-large-2 white"></i>
+                    </div>
+                    <tr t-as="line" t-foreach="config.line_ids">
+                        <div class="p-4 media-body">
+                            <h5 t-esc="line.name"></h5>
+                            <h5 t-esc="line.value_char"></h5>
+                        </div>
+                    </tr>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_26_Icon_Section__New_Users" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_27_Icon_Section__New_Orders" name="tb_27_Icon_Section__New_Orders">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="media align-items-stretch">
+                    <div class="p-4 text-center bg-success">
+                        <i class="icon-basket-loaded font-large-2 white"></i>
+                    </div>
+                    <tr t-as="line" t-foreach="config.line_ids">
+                        <div class="p-4 media-body">
+                            <h5 t-esc="line.name"></h5>
+                            <h5 t-esc="line.value_char"></h5>
+                        </div>
+                    </tr>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_27_Icon_Section__New_Orders" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_28_Icon_Section__Total_Profit" name="tb_28_Icon_Section__Total_Profit">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="media align-items-stretch">
+                    <div class="p-4 text-center bg-warning">
+                        <i class="icon-wallet font-large-2 white"></i>
+                    </div>
+                    <tr t-as="line" t-foreach="config.line_ids">
+                        <div class="p-4 media-body">
+                            <h5 t-esc="line.name"></h5>
+                            <h5 t-esc="line.value_char"></h5>
+                        </div>
+                    </tr>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_28_Icon_Section__Total_Profit" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_29_Icon_Section__Products" name="tb_29_Icon_Section__Products">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="media align-items-stretch">
+                    <tr t-as="line" t-foreach="config.line_ids">
+                        <div class="p-4 media-body text-left">
+                            <h5 t-esc="line.name"></h5>
+                            <h5 t-esc="line.value_char"></h5>
+                        </div>
+                    </tr>
+                    <div class="p-4 text-center bg-warning">
+                        <i class="icon-camera font-large-2 white"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_29_Icon_Section__Products" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_30_Icon_Section__New_Users" name="tb_30_Icon_Section__New_Users">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="media align-items-stretch">
+                    <tr t-as="line" t-foreach="config.line_ids">
+                        <div class="p-4 media-body text-left">
+                            <h5 t-esc="line.name"></h5>
+                            <h5 t-esc="line.value_char"></h5>
+                        </div>
+                    </tr>
+                    <div class="p-4 text-center bg-success">
+                        <i class="icon-user font-large-2 white"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_30_Icon_Section__New_Users" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_31_Icon_Section__New_Orders" name="tb_31_Icon_Section__New_Orders">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="media align-items-stretch">
+                    <tr t-as="line" t-foreach="config.line_ids">
+                        <div class="p-4 media-body text-left">
+                            <h5 t-esc="line.name"></h5>
+                            <h5 t-esc="line.value_char"></h5>
+                        </div>
+                    </tr>
+                    <div class="p-4 text-center bg-danger">
+                        <i class="icon-basket-loaded font-large-2 white"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_31_Icon_Section__New_Orders" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_32_Icon_Section__Total_Profit" name="tb_32_Icon_Section__Total_Profit">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="media align-items-stretch">
+                    <tr t-as="line" t-foreach="config.line_ids">
+                        <div class="p-4 media-body text-left">
+                            <h5 t-esc="line.name"></h5>
+                            <h5 t-esc="line.value_char"></h5>
+                        </div>
+                    </tr>
+                    <div class="p-4 text-center bg-primary">
+                        <i class="icon-wallet font-large-2 white"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_32_Icon_Section__Total_Profit" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_33_Icon_Section__Products" name="tb_33_Icon_Section__Products">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="media align-items-stretch">
+                    <div class="p-4 text-center bg-primary">
+                        <i class="icon-camera font-large-2 white"></i>
+                    </div>
+                    <tr t-as="line" t-foreach="config.line_ids">
+                        <div class="py-3 px-4 media-body">
+                            <h5 t-esc="line.name"></h5>
+                            <h5 t-esc="line.value_char"></h5>
+                            <div class="progress mt-3 mb-0" style="height: 7px;">
+                                <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="80" class="progress-bar bg-primary" role="progressbar" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </tr>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_33_Icon_Section__Products" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_34_Icon_Section__New_Users" name="tb_34_Icon_Section__New_Users">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="media align-items-stretch">
+                    <div class="p-4 text-center bg-danger">
+                        <i class="icon-user font-large-2 white"></i>
+                    </div>
+                    <tr t-as="line" t-foreach="config.line_ids">
+                        <div class="py-3 px-4 media-body">
+                            <h5 t-esc="line.name"></h5>
+                            <h5 t-esc="line.value_char"></h5>
+                            <div class="progress mt-3 mb-0" style="height: 7px;">
+                                <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="45" class="progress-bar bg-danger" role="progressbar" style="width: 45%"></div>
+                            </div>
+                        </div>
+                    </tr>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_34_Icon_Section__New_Users" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_35_Icon_Section__New_Orders" name="tb_35_Icon_Section__New_Orders">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="media align-items-stretch">
+                    <div class="p-4 text-center bg-success">
+                        <i class="icon-basket-loaded font-large-2 white"></i>
+                    </div>
+                    <tr t-as="line" t-foreach="config.line_ids">
+                        <div class="py-3 px-4 media-body">
+                            <h5 t-esc="line.name"></h5>
+                            <h5 t-esc="line.value_char"></h5>
+                            <div class="progress mt-3 mb-0" style="height: 7px;">
+                                <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" class="progress-bar bg-success" role="progressbar" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </tr>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_35_Icon_Section__New_Orders" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_36_Icon_Section__Total_Profit" name="tb_36_Icon_Section__Total_Profit">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="media align-items-stretch">
+                    <div class="p-4 text-center bg-warning">
+                        <i class="icon-wallet font-large-2 white"></i>
+                    </div>
+                    <tr t-as="line" t-foreach="config.line_ids">
+                        <div class="py-3 px-4 media-body">
+                            <h5 t-esc="line.name"></h5>
+                            <h5 t-esc="line.value_char"></h5>
+                            <div class="progress mt-3 mb-0" style="height: 7px;">
+                                <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" class="progress-bar bg-warning" role="progressbar" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </tr>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_36_Icon_Section__Total_Profit" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_37_Icon_Section_With_Background_Color__Products" name="tb_37_Icon_Section_With_Background_Color__Products">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="media align-items-stretch">
+                    <div class="p-4 text-center bg-primary bg-darken-2">
+                        <i class="icon-camera font-large-2 white"></i>
+                    </div>
+                    <tr t-as="line" t-foreach="config.line_ids">
+                        <div class="p-4 bg-primary white media-body">
+                            <h5 t-esc="line.name"></h5>
+                            <h5 t-esc="line.value_char"></h5>
+                        </div>
+                    </tr>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_37_Icon_Section_With_Background_Color__Products" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_38_Icon_Section_With_Background_Color__New_Users" name="tb_38_Icon_Section_With_Background_Color__New_Users">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="media align-items-stretch">
+                    <div class="p-4 text-center bg-danger bg-darken-2">
+                        <i class="icon-user font-large-2 white"></i>
+                    </div>
+                    <tr t-as="line" t-foreach="config.line_ids">
+                        <div class="p-4 bg-danger white media-body">
+                            <h5 t-esc="line.name"></h5>
+                            <h5 t-esc="line.value_char"></h5>
+                        </div>
+                    </tr>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_38_Icon_Section_With_Background_Color__New_Users" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_39_Icon_Section_With_Background_Color__New_Orders" name="tb_39_Icon_Section_With_Background_Color__New_Orders">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="media align-items-stretch">
+                    <div class="p-4 text-center bg-success bg-darken-2">
+                        <i class="icon-basket-loaded font-large-2 white"></i>
+                    </div>
+                    <tr t-as="line" t-foreach="config.line_ids">
+                        <div class="p-4 bg-success white media-body">
+                            <h5 t-esc="line.name"></h5>
+                            <h5 t-esc="line.value_char"></h5>
+                        </div>
+                    </tr>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_39_Icon_Section_With_Background_Color__New_Orders" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_40_Icon_Section_With_Background_Color__Total_Profit" name="tb_40_Icon_Section_With_Background_Color__Total_Profit">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="media align-items-stretch">
+                    <div class="p-4 text-center bg-warning bg-darken-2">
+                        <i class="icon-wallet font-large-2 white"></i>
+                    </div>
+                    <tr t-as="line" t-foreach="config.line_ids">
+                        <div class="p-4 bg-warning white media-body">
+                            <h5 t-esc="line.name"></h5>
+                            <h5 t-esc="line.value_char"></h5>
+                        </div>
+                    </tr>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_40_Icon_Section_With_Background_Color__Total_Profit" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_41_Icon_Section_With_Background_Color__Products" name="tb_41_Icon_Section_With_Background_Color__Products">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="media align-items-stretch">
+                    <tr t-as="line" t-foreach="config.line_ids">
+                        <div class="p-4 bg-warning white media-body text-left">
+                            <h5 t-esc="line.name"></h5>
+                            <h5 t-esc="line.value_char"></h5>
+                        </div>
+                    </tr>
+                    <div class="p-4 text-center bg-warning bg-darken-2">
+                        <i class="icon-camera font-large-2 white"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_41_Icon_Section_With_Background_Color__Products" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_42_Icon_Section_With_Background_Color__New_Users" name="tb_42_Icon_Section_With_Background_Color__New_Users">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="media align-items-stretch">
+                    <tr t-as="line" t-foreach="config.line_ids">
+                        <div class="p-4 bg-success white media-body text-left">
+                            <h5 t-esc="line.name"></h5>
+                            <h5 t-esc="line.value_char"></h5>
+                        </div>
+                    </tr>
+                    <div class="p-4 text-center bg-success bg-darken-2">
+                        <i class="icon-user font-large-2 white"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_42_Icon_Section_With_Background_Color__New_Users" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_43_Icon_Section_With_Background_Color__New_Orders" name="tb_43_Icon_Section_With_Background_Color__New_Orders">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="media align-items-stretch">
+                    <tr t-as="line" t-foreach="config.line_ids">
+                        <div class="p-4 bg-danger white media-body text-left">
+                            <h5 t-esc="line.name"></h5>
+                            <h5 t-esc="line.value_char"></h5>
+                        </div>
+                    </tr>
+                    <div class="p-4 text-center bg-danger bg-darken-2">
+                        <i class="icon-basket-loaded font-large-2 white"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_43_Icon_Section_With_Background_Color__New_Orders" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_44_Icon_Section_With_Background_Color__Total_Profit" name="tb_44_Icon_Section_With_Background_Color__Total_Profit">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="media align-items-stretch">
+                    <tr t-as="line" t-foreach="config.line_ids">
+                        <div class="p-4 bg-primary white media-body text-left">
+                            <h5 t-esc="line.name"></h5>
+                            <h5 t-esc="line.value_char"></h5>
+                        </div>
+                    </tr>
+                    <div class="p-4 text-center bg-primary bg-darken-2">
+                        <i class="icon-wallet font-large-2 white"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_44_Icon_Section_With_Background_Color__Total_Profit" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_45_Icon_Section_With_Gradient_Background_Color__Products" name="tb_45_Icon_Section_With_Gradient_Background_Color__Products">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="media align-items-stretch">
+                    <div class="p-4 text-center bg-primary bg-darken-2">
+                        <i class="icon-camera font-large-2 white"></i>
+                    </div>
+                    <tr t-as="line" t-foreach="config.line_ids">
+                        <div class="p-4 bg-gradient-x-primary white media-body">
+                            <h5 t-esc="line.name"></h5>
+                            <h5 t-esc="line.value_char"></h5>
+                        </div>
+                    </tr>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_45_Icon_Section_With_Gradient_Background_Color__Products" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_46_Icon_Section_With_Gradient_Background_Color__Users" name="tb_46_Icon_Section_With_Gradient_Background_Color__Users">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="media align-items-stretch">
+                    <div class="p-4 text-center bg-danger bg-darken-2">
+                        <i class="icon-user font-large-2 white"></i>
+                    </div>
+                    <tr t-as="line" t-foreach="config.line_ids">
+                        <div class="p-4 bg-gradient-x-danger white media-body">
+                            <h5 t-esc="line.name"></h5>
+                            <h5 t-esc="line.value_char"></h5>
+                        </div>
+                    </tr>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_46_Icon_Section_With_Gradient_Background_Color__Users" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_47_Icon_Section_With_Gradient_Background_Color__Orders" name="tb_47_Icon_Section_With_Gradient_Background_Color__Orders">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="media align-items-stretch">
+                    <div class="p-4 text-center bg-success bg-darken-2">
+                        <i class="icon-basket-loaded font-large-2 white"></i>
+                    </div>
+                    <tr t-as="line" t-foreach="config.line_ids">
+                        <div class="p-4 bg-gradient-x-success white media-body">
+                            <h5 t-esc="line.name"></h5>
+                            <h5 t-esc="line.value_char"></h5>
+                        </div>
+                    </tr>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_47_Icon_Section_With_Gradient_Background_Color__Orders" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_48_Icon_Section_With_Gradient_Background_Color__Profit" name="tb_48_Icon_Section_With_Gradient_Background_Color__Profit">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="media align-items-stretch">
+                    <div class="p-4 text-center bg-warning bg-darken-2">
+                        <i class="icon-wallet font-large-2 white"></i>
+                    </div>
+                    <tr t-as="line" t-foreach="config.line_ids">
+                        <div class="p-4 bg-gradient-x-warning white media-body">
+                            <h5 t-esc="line.name"></h5>
+                            <h5 t-esc="line.value_char"></h5>
+                        </div>
+                    </tr>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_48_Icon_Section_With_Gradient_Background_Color__Profit" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_49_Icon_Section_With_Gradient_Background_Color__Products" name="tb_49_Icon_Section_With_Gradient_Background_Color__Products">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="media align-items-stretch">
+                    <tr t-as="line" t-foreach="config.line_ids">
+                        <div class="p-4 bg-gradient-x-warning white media-body text-left">
+                            <h5 t-esc="line.name"></h5>
+                            <h5 t-esc="line.value_char"></h5>
+                        </div>
+                    </tr>
+                    <div class="p-4 text-center bg-warning bg-darken-2">
+                        <i class="icon-camera font-large-2 white"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_49_Icon_Section_With_Gradient_Background_Color__Products" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_50_Icon_Section_With_Gradient_Background_Color__Users" name="tb_50_Icon_Section_With_Gradient_Background_Color__Users">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="media align-items-stretch">
+                    <tr t-as="line" t-foreach="config.line_ids">
+                        <div class="p-4 bg-gradient-x-success white media-body text-left">
+                            <h5 t-esc="line.name"></h5>
+                            <h5 t-esc="line.value_char"></h5>
+                        </div>
+                    </tr>
+                    <div class="p-4 text-center bg-success bg-darken-2">
+                        <i class="icon-user font-large-2 white"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_50_Icon_Section_With_Gradient_Background_Color__Users" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_51_Icon_Section_With_Gradient_Background_Color__Orders" name="tb_51_Icon_Section_With_Gradient_Background_Color__Orders">
+    <div class="col-xl-3 col-sm-6 col-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="media align-items-stretch">
+                    <tr t-as="line" t-foreach="config.line_ids">
+                        <div class="p-4 bg-gradient-x-danger white media-body text-left">
+                            <h5 t-esc="line.name"></h5>
+                            <h5 t-esc="line.value_char"></h5>
+                        </div>
+                    </tr>
+                    <div class="p-4 text-center bg-danger bg-darken-2">
+                        <i class="icon-basket-loaded font-large-2 white"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_51_Icon_Section_With_Gradient_Background_Color__Orders" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+<template id="tb_52_Icon_Section_With_Gradient_Background_Color__Profit" name="tb_52_Icon_Section_With_Gradient_Background_Color__Profit">
+    <div class="col-xl-3 col-sm-6 col-lg-6 ol-12">
+        <div class="card mono-card">
+            <div class="card-content">
+                <div class="media align-items-stretch">
+                    <tr t-as="line" t-foreach="config.line_ids">
+                        <div class="p-4 bg-gradient-x-primary white media-body text-left">
+                            <h5 t-esc="line.name"></h5>
+                            <h5 t-esc="line.value_char"></h5>
+                        </div>
+                    </tr>
+                    <div class="p-4 text-center bg-primary bg-darken-2">
+                        <i class="icon-wallet font-large-2 white"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<record id="tb_52_Icon_Section_With_Gradient_Background_Color__Profit" model="ir.ui.view">
+    <field name="is_banner_template">1</field>
+</record>
+</odoo>

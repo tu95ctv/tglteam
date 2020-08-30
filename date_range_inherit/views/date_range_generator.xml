@@ -1,0 +1,13 @@
+<odoo>
+  <record id="date_range_generator_view_form_inherit" model="ir.ui.view">
+        <field name="name">date.range.generator.form</field>
+        <field name="model">date.range.generator</field>
+        <field name="inherit_id" ref="date_range.date_range_generator_view_form" />
+        <field name="arch" type="xml">
+           <field name="count" position="after">
+              <field name="name_suffix"/>
+              <field name="start_of_number"/>
+           </field>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="paperformat_80mm" model="report.paperformat">
+            <field name="name">Khổ 80mm</field>
+            <field name="default" eval="True" />
+            <field name="format">custom</field>
+            <field name="page_height">500</field>
+            <field name="page_width">74</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">0</field>
+            <field name="margin_bottom">20</field>
+            <field name="margin_left">0</field>
+            <field name="margin_right">0</field>
+            <field name="header_line" eval="False" />
+            <field name="header_spacing">0</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <report 
+            id="action_report_picking_include_invoice_80mm"
+            string="Phiếu giao hàng kiêm hóa đơn"
+            model="stock.picking" 
+            report_type="qweb-pdf"
+            file="sp_include_invoice_report_80mm.picking_include_invoice_80mm" 
+            name="sp_include_invoice_report_80mm.picking_include_invoice_80mm"
+            print_report_name="object.name"
+            paperformat="sp_include_invoice_report_80mm.paperformat_80mm"
+        />
+
+    </data>
+</odoo>

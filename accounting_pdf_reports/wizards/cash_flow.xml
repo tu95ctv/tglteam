@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <record id="luu_chuyen_tien_te_truc_tiep" model="account.financial.report">
+        <field name="name">BÁO CÁO LƯU CHUYỂN TIỀN TỆ</field>
+        <field name="full_name"><![CDATA[ <div>BẢNG LƯU CHUYỂN TIỀN TỆ</div><div>(Theo phương pháp trực tiếp) (*)</div> ]]></field>
+        <field name="type">sum</field>
+        <field name="right_header"><![CDATA[
+<div>Mẫu số B 03 – DN</div>
+<div>(Ban hành theo Thông tư số 200/2014/TT-BTC</div>
+<div>Ngày 22/12/2014 của Bộ Tài chính)</div>
+        ]]></field>
+    </record>
+
+    <record id="luu_chuyen_tien_te_gian_tiep_root" model="account.financial.report">
+        <field name="name">BÁO CÁO LƯU CHUYỂN TIỀN TỆ</field>
+        <field name="full_name"><![CDATA[ <div>BẢNG LƯU CHUYỂN TIỀN TỆ</div><div>(Theo phương pháp gián tiếp) (*)</div> ]]></field>
+        <field name="type">sum</field>
+        <field name="right_header"><![CDATA[
+<div>Mẫu số B 03 – DN</div>
+<div>(Ban hành theo Thông tư số 200/2014/TT-BTC</div>
+<div>Ngày 22/12/2014 của Bộ Tài chính)</div>
+        ]]></field>
+    </record>
+
+    <record id="action_cash_flow_direct_report" model="ir.actions.act_window">
+        <field name="name">Lưu chuyển tiền tệ (trực tiếp)</field>
+        <field name="res_model">accounting.report</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="accounting_report_view"/>
+        <field name="target">current</field>
+        <field name="context" eval="{'default_account_report_id':ref('accounting_pdf_reports.luu_chuyen_tien_te_truc_tiep')}"/>
+    </record>
+
+    <record id="action_cash_flow_indirect_report" model="ir.actions.act_window">
+        <field name="name">Lưu chuyển tiền tệ (gián tiếp)</field>
+        <field name="res_model">accounting.report</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="accounting_report_view"/>
+        <field name="target">current</field>
+        <field name="context" eval="{'default_account_report_id':ref('accounting_pdf_reports.luu_chuyen_tien_te_gian_tiep_root')}"/>
+    </record>
+
+
+</odoo>

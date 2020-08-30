@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!--         <menuitem id="menu_print_journal"
+            name="Journals Audit"
+            sequence="1"
+            parent="accounting_pdf_reports.menu_finance_legal_statement"
+            action="action_account_print_journal_menu"
+            groups="account.group_account_manager,account.group_account_user"/> -->
+
+        <menuitem id="menu_finance_reports_settings"
+                  name="Cấu trúc báo cáo tài chính"
+                  sequence="9"
+                  groups="account.group_account_user"
+                  parent="account.menu_finance_configuration"/>
+
+        <menuitem id="menu_account_reports"
+                  name="Cấu hinh báo cáo tài chính"
+                  action="action_account_financial_report_tree"
+                  groups="account.group_account_user"
+                  parent="menu_finance_reports_settings"/>
+
+        <menuitem id="menu_general_ledger"
+            name="Sổ nhật ký chung"
+            sequence="10"
+            parent="accounting_pdf_reports.menu_finance_legal_statement"
+            action="action_account_general_ledger_menu"
+            groups="account.group_account_user"/>
+
+        <menuitem id="menu_partner_ledger"
+            name="Danh mục công nợ"
+            sequence="20"
+            parent="accounting_pdf_reports.menu_finance_legal_statement"
+            action="action_account_partner_ledger_menu"
+            groups="account.group_account_user"/>
+
+        <menuitem id="menu_aged_trial_balance"
+            name="Bảng cân đối tuổi nợ"
+            sequence="30"
+            action="action_account_aged_balance_view"
+            parent="accounting_pdf_reports.menu_finance_legal_statement"/>
+
+        <menuitem id="menu_general_Balance_report"
+            name="Bảng cân đối phát sinh"
+            sequence="40"
+            parent="accounting_pdf_reports.menu_finance_legal_statement"
+            action="action_account_balance_menu"
+            groups="account.group_account_user"/>
+
+        <menuitem id="menu_account_report_bs"
+            name="Bảng cân đối kế toán"
+            sequence="50"
+            action="action_account_report_bs"
+            parent="accounting_pdf_reports.menu_finance_legal_statement"
+            groups="account.group_account_user"/>
+
+        <menuitem id="menu_account_report_pl"
+            name="Kết quả hoạt động kinh doanh"
+            sequence="60"
+            action="action_account_report_pl"
+            parent="accounting_pdf_reports.menu_finance_legal_statement"
+            groups="account.group_account_user"/>
+
+        <menuitem id="menu_cash_flow_indirect_report"
+            name="Lưu chuyển tiền tệ (gián tiếp)"
+            sequence="70"
+            action="action_cash_flow_indirect_report"
+            parent="accounting_pdf_reports.menu_finance_legal_statement"
+            groups="account.group_account_user"/>
+
+        <menuitem id="menu_cash_flow_direct_report"
+            name="Lưu chuyển tiền tệ (trực tiếp)"
+            sequence="80"
+            action="action_cash_flow_direct_report"
+            parent="accounting_pdf_reports.menu_finance_legal_statement"
+            groups="account.group_account_user"/>        
+        
+        <menuitem id="menu_account_report"
+            name="Báo cáo thuế"
+            sequence="90"
+            action="action_account_tax_report"
+            parent="accounting_pdf_reports.menu_finance_legal_statement"
+            groups="account.group_account_manager,account.group_account_user"/>
+
+        
+</odoo>

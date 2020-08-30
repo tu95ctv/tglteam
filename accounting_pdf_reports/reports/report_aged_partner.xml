@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_agedpartnerbalance">
+        <t t-call="web.html_container">
+            <!-- <t t-call="web.internal_layout"> -->
+            <div class="page">
+
+
+                <div class="row mt32 mb32">
+                    <div class="col-7">
+                        <div>
+                            <strong>Đơn vị báo cáo: <span t-esc="res_company.name"/></strong>
+                        </div>
+                        <div>
+                            <strong>Địa chỉ:<t t-esc="res_company.partner_id" t-options='{"widget": "contact", "fields": ["address"], "no_marker": True}'/></strong>
+                        </div>
+                    </div>
+                    <div class="col-5 text-center font-weight-bold">
+                    </div>
+                </div>
+                <h2 class="text-center">BẢNG CÂN ĐỐI TUỔI NỢ</h2>
+
+                <!-- <h2>Bảng cân đối tuổi nợ</h2>
+
+                <div class="row mt32">
+                    <div class="col-3">
+                        <strong>Start Date:</strong>
+                        <p t-esc="data['date_from']"/>
+                    </div>
+                    <div class="col-3">
+                        <strong>Period Length (days)</strong>
+                        <p t-esc="data['period_length']"/>
+                    </div>
+                </div>
+                <div class="row mb32">
+                    <div class="col-3">
+                        <strong>Partner's:</strong>
+                        <p>
+                            <span t-if="data['result_selection'] == 'customer'">Receivable Accounts</span>
+                            <span t-if="data['result_selection'] == 'supplier'">Payable Accounts</span>
+                            <span t-if="data['result_selection'] == 'customer_supplier'">Receivable and Payable Accounts</span>
+                        </p>
+                    </div>
+                    <div class="col-3">
+                        <strong>Target Moves:</strong>
+                        <p>
+                            <span t-if="data['target_move'] == 'all'">All Entries</span>
+                            <span t-if="data['target_move'] == 'posted'">All Posted Entries</span>
+                        </p>
+                    </div>
+                </div> -->
+
+                <table class="table table-sm table-reports">
+                    <thead>
+                        <tr>
+                            <th>Đối tác</th>
+                            <th class="text-right">
+                                <span>Chưa đến hạn</span>
+                            </th>
+                            <th class="text-right"><span t-esc="data['4']['name']"/></th>
+                            <th class="text-right"><span t-esc="data['3']['name']"/></th>
+                            <th class="text-right"><span t-esc="data['2']['name']"/></th>
+                            <th class="text-right"><span t-esc="data['1']['name']"/></th>
+                            <th class="text-right"><span t-esc="data['0']['name']"/></th>
+                            <th class="text-right">Tổng</th>
+                        </tr>
+                        <tr t-if="get_partner_lines">
+                            <th>Tổng cộng</th>
+                            <th class="text-right"><span t-esc="get_direction[6]" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/></th>
+                            <th class="text-right"><span t-esc="get_direction[4]" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/></th>
+                            <th class="text-right"><span t-esc="get_direction[3]" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/></th>
+                            <th class="text-right"><span t-esc="get_direction[2]" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/></th>
+                            <th class="text-right"><span t-esc="get_direction[1]" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/></th>
+                            <th class="text-right"><span t-esc="get_direction[0]" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/></th>
+                            <th class="text-right"><span t-esc="get_direction[5]" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr t-foreach="get_partner_lines" t-as="partner">
+                            <td>
+                                <span t-esc="partner['name']"/>
+                            </td>
+                            <td class="text-right">
+                                <span t-esc="partner['direction']" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                            </td>
+                            <td class="text-right">
+                                <span t-esc="partner['4']" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                            </td>
+                            <td class="text-right">
+                                <span t-esc="partner['3']" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                            </td>
+                            <td class="text-right">
+                                <span t-esc="partner['2']" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                            </td>
+                            <td class="text-right">
+                                <span t-esc="partner['1']" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                            </td>
+                            <td class="text-right">
+                                <span t-esc="partner['0']" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                            </td>
+                            <td class="text-right">
+                                <span t-esc="partner['total']" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="row mt32">
+                    <div class="col-12 text-right font-weight-bold">
+                        Lập, ngày ... tháng ... năm ...
+                    </div>
+                </div>
+
+                <table class="table table-bordered">
+                    <thead>
+                        <tr class="text-center font-weight-bold font-italic">
+                            <th>Người lập biểu</th>
+                            <th>Kế toán trưởng</th>
+                            <th>Giám đốc</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="text-center" style="height: 150px">
+                            <td>(Ký, họ tên)</td>
+                            <td>(Ký, họ tên)</td>
+                            <td>(Ký, họ tên, đóng dấu)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </div>
+            <!-- </t> -->
+        </t>
+    </template>
+</odoo>

@@ -1,0 +1,36 @@
+<odoo>
+    <record id="building_management.partner_category_owner" model="res.partner.category">
+        <field name="image" type="base64" file="building_management_inherit/static/img/woman.png"/>
+    </record>
+
+    <record id="building_management.partner_category_wife" model="res.partner.category">
+        <field name="image" type="base64" file="building_management_inherit/static/img/woman.png"/>
+    </record>
+
+    <record id="building_management.partner_category_husband" model="res.partner.category">
+        <field name="image" type="base64" file="building_management_inherit/static/img/man.png"/>
+    </record>
+
+    <record id="building_management.partner_category_child" model="res.partner.category">
+        <field name="image" type="base64" file="building_management_inherit/static/img/boy.png"/>
+    </record>
+
+
+    <record id="building_management.product_can_ho" model="product.product">
+        <field name="image" type="base64" file="building_management_inherit/static/img/canho.png"/>
+    </record>
+
+    <record id="building_management.product_thuong_mai" model="product.product">
+        <field name="image" type="base64" file="building_management_inherit/static/img/thuongmai.jpg"/>
+    </record>
+
+    <record id="building_management.product_van_phong" model="product.product">
+        <field name="image" type="base64" file="building_management_inherit/static/img/vanphong.jpg"/>
+    </record>
+
+    <record id="building_management.product_phi_thue_nha" model="product.product">
+        <field name="image" type="base64" file="building_management_inherit/static/img/phithuenha.jpg"/>
+    </record>
+
+
+</odoo>
