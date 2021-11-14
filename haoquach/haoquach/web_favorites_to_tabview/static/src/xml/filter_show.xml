@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-extend="SearchView.FavoriteMenu">
+        <t t-jquery="div:last" t-operation="after">
+            <li class="tgl_action_filter_list_view">
+                <button type="button" class="btn btn-primary btn-sm">Tab Configuration</button>
+            </li>
+        </t>
+    </t>
+
+    <t t-name="TGLKuteTabView">
+        <ul class='nav nav-tabs tgl_ul_tabs'></ul>
+    </t>
+    
+</templates>

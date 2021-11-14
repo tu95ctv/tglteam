@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="assets_backend" inherit_id="web.assets_backend">
+          <xpath expr="." position="inside">
+              <link rel="stylesheet" type="text/css" href="/web_favorites_to_tabview/static/src/css/filter_view.css"/>
+              <script type="text/javascript" src="/web_favorites_to_tabview/static/src/js/list_view.js" />
+          </xpath>
+        </template>
+    </data>
+</odoo>
